@@ -38,7 +38,7 @@ jobs:
             pip install \
               awscli==1.14.37
 
-            aws s3 sync build/ s3://oliver-nural-portfolio-bucket
+            aws s3 sync public/ s3://oliver-nural-portfolio-bucket
             
 workflows:
   version: 2
