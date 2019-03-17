@@ -1,0 +1,10 @@
+.canvas {
+    position: fixed;
+    opacity: 1;
+    transition: 1s opacity;
+}
+
+canvas.fade-out {
+    opacity: 0;
+    transition: none;
+}

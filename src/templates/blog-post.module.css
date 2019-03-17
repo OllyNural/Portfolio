@@ -1,0 +1,10 @@
+.container {
+    height: 100vh;
+    /* display: flex;
+    -webkit-display: flex; */
+    /* justify-content: centre; */
+}
+
+.heroImage {
+    height: 100%;
+}
