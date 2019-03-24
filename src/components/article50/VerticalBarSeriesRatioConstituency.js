@@ -38,7 +38,7 @@ export default class VerticalBarComponentRatioConstituency extends Component {
                     <XYPlot
                         xType="linear"
                         yType="ordinal"
-                        width={this.state.windowWidth * 0.85} 
+                        width={1000}
                         margin={{left: 200}}
                         height={1000}>
                         <VerticalGridLines />
@@ -61,12 +61,26 @@ export default class VerticalBarComponentRatioConstituency extends Component {
         let sigsByCountry = data.attributes.signatures_by_constituency
         sigsByCountry = sigsByCountry.filter(s => s.ons_code[0] === area)
         sigsByCountry = sigsByCountry.map(({name, ons_code, signature_count}) => {
-            return {y: name, x: signature_count, desc: name, code: ons_code}
+            return {y: name, x: signature_count, desc: name, code: ons_code, area: area}
         })
         return sigsByCountry
     }
 
     getDataConstRatio = (data, { edges }) => {
+        // edges.shift()
+        // edges.shift()
+        // console.log(data[0].area)
+        // console.log('total data votes for const')
+        // console.log(data.reduce(((acc, a) => acc + parseInt(a.x)), 0))
+        // console.log('total edges people for const')
+        // console.log(edges.reduce((acc, e) => {
+        //     if (e.node.Contents[0] === data[0].area) {
+        //         return acc + parseInt(e.node['_xEMPTYx1'])
+        //     } else {
+        //         return acc
+        //     }
+        // }, 0)
+        // )
         data = data.map(d => {
             let e = edges.find(e => (e.node.Contents === d.code))
             return {...d, x: ((d.x / e.node['_xEMPTYx1']) * 100).toFixed(2)}

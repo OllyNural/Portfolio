@@ -120,8 +120,8 @@ const IndexPage = () => (
 
                 <LineBreak />
                 <h3> Largest voting areas for each constituency within the United Kingdom</h3>
-                <p>Each of these list the counties within each of England, Scotland, Wales, and Northern Ireland in the order of the most voted. However this is heavily skewed by city and county sizes.</p>
-                <p>However, it does interestingly show that England voted a lot more consistently across most counties, whilst Scotland, Wales and Northern Ireland both have a few large outliers and many more reserved areas.</p>
+                <p>Each of these list the constituencies within each of England, Scotland, Wales, and Northern Ireland in the order of the most voted. However this is heavily skewed by city and county sizes.</p>
+                <p>However, it does interestingly show that England voted a lot more consistently across most constituencies, whilst Scotland, Wales and Northern Ireland both have a few large outliers and many more reserved areas.</p>
                 <h4>England</h4>
                 <VerticalBarSeriesArea
                     data={allArticle50Votes.edges[0].node}
@@ -146,7 +146,9 @@ const IndexPage = () => (
                 <LineBreak />
                 <h3> Ratio of voting areas for each constituency against population within the UK </h3>
                 <p><i>The population per constituency was found <a href="https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/parliamentaryconstituencymidyearpopulationestimates" target="constituencyvotes">here</a>.</i></p>
+                <p> The ratio of voters against total population of each constituency. </p>
                 <p> Unfortunately, I could only currently find data for England and Wales. </p>
+                <p><i> Investigating data sets as unsure if this graph does not match earlier ratio graph. </i></p>
                 <h4>England</h4>
                 <VerticalBarSeriesRatioConstituency
                     data={allArticle50Votes.edges[0].node}
