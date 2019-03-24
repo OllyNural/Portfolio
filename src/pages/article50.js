@@ -16,9 +16,9 @@ import VerticalBarSeriesRatioConstituency from '../components/article50/Vertical
 
 const getIntro = () => (
     <div>
-        <h1 className={article50.pageTitle} > Article50 petition data visualisation</h1>
+        <h1 className={article50.pageTitle} > Article50 petition data Analysis</h1>
         <p> After being linked the petition below requesting to revoke Article 50, I thought it could be interesting to visualise some of the data provided by the government website.</p>
-        <p> This is my first attempt at any sort of data visualisation so feel free to request more graphs/send some feedback at <i>oliver.nural@gmail.com</i> </p>
+        <p> This is my first attempt at any sort of data visualisation/analysis so feel free to request more graphs/send some feedback at <i>oliver.nural@gmail.com</i> </p>
         <p> I haven't really done much styling, so realistically this is in as much of a mess as our country is. </p>
         <p> <i> Disclaimer: This is purely the result of procrastination on a Saturday afternoon. </i> </p>
     </div>
@@ -79,7 +79,7 @@ const IndexPage = () => (
         `}
         render={({ allArticle50Votes }) => 
             <Layout>
-                <SEO title="Oliver Nural | Article50 Data Visualisation" keywords={[`article50`, `petition`, `data visualisation`]} />
+                <SEO title="Oliver Nural | Article50 Data Analysis" keywords={[`article50`, `petition`, `data analysis`]} />
                 {getIntro()}
                 <LineBreak />
                 {getMetaData(allArticle50Votes.edges[0].node)}
