@@ -90,7 +90,6 @@ export default class RadialChartComponent extends Component {
             sig.constituencies = constituencies.length
             sig.votes = constituencies.reduce((acc, d) => acc + parseInt(d.signature_count), 0)
             sig.ratio = (sig.votes / constants.populations[sig.location]) * 100
-            console.log(sig.location, sig.ratio)
             return {...sig, angle: sig.ratio}
         })
         return filteredSigs

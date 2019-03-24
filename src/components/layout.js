@@ -9,7 +9,6 @@ import './layout.css'
 
 const Layout = ({ children }) => {
   let simplex = new SimplexNoise()
-  console.log(simplex)
   return (
   <StaticQuery
     query={graphql`

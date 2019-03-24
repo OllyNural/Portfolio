@@ -36,7 +36,6 @@ const getDataLocale = (votes) => {
         sig.votes = constCount.reduce((acc, d) => acc + parseInt(d.signature_count), 0)
         return {...sig, angle: sig.votes}
     })
-    console.table(filteredSigs)
     return filteredSigs
 }
 
@@ -47,14 +46,8 @@ const RadialChartComponent = ({data, width, height}) => {
             data={getDataLocale(data)}
             width={width}
             height={height} 
-            onValueMouseOver={v => {
-                console.log(v)
-                isHover = v
-            }}
+            onValueMouseOver={v => isHover = v}
             onSeriesMouseOut={v => isHover = false}
-
-            // showLabels='true'
-            // className={chartCSS.chartContainer} 
         >
             {isHover !== false && <Hint isHover={isHover} />}
         </RadialChart>

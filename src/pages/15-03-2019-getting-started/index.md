@@ -1,7 +1,7 @@
 ---
-path: "/hello-world"
+path: "/test1"
 date: 2017-07-12T17:12:33.962Z
-title: "Blind Confidence"
+title: "Test Hero"
 hero: distance-drive-hero.jpg
 tags: ["first", "blog"]
 excerpt: "First blog post"
@@ -14,5 +14,3 @@ const x = () {
     console.log(hello)
 }
 ```
-<!-- Hello 
-![](./Italy-Oliver.jpg) -->
