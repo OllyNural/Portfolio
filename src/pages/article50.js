@@ -81,27 +81,34 @@ const IndexPage = () => (
                 {getMetaData(allArticle50Votes.edges[0].node)}
                 <LineBreak />
                 <h3> Radial Chart of Votes by Country </h3>
+                <p>Showing us that the UK accounted for the vast majority of votes is no suprise.</p>
                 <RadialChartCountry
                     data={allArticle50Votes.edges[0].node}
                     width={500}
                     height={500} />
 
+
                 <h3> Logarithmic Bar Chart of Votes by Country </h3>
+                <p>This lets us easily see the list of countries who voted in order of the largest number of votes. </p>
                 <VerticalBarSeriesCountry 
                     data={allArticle50Votes.edges[0].node}
                     width={500}
                     height={500} />
 
+
                 <LineBreak />
                 <h3> Chart of Votes by country within the United Kingdom </h3>
+                <p> Upon first glance this looks like a massive amount of votes for England comparitive to other countries, but it does not take into account country population.</p>
                 <RadialChartArea
                     data={allArticle50Votes.edges[0].node}
                     width={500}
                     height={500} />
 
+
                 <LineBreak />
-                <h3> Ratio of voters per country within the United Kingdom</h3>
+                <h3> Ratio of voters per country by population within the United Kingdom</h3>
                 <p><i>The populations were taken from: <a href="https://en.wikipedia.org/wiki/Countries_of_the_United_Kingdom_by_population" target="wiki">https://en.wikipedia.org/wiki/Countries_of_the_United_Kingdom_by_population </a></i></p>
+                <p> Interestingly the votes look a lot more even, with both Wales and Scotland actually voting more than England relative to their population.</p>
                 <RadialChartAreaRatio
                     data={allArticle50Votes.edges[0].node}
                     width={500}
@@ -109,6 +116,8 @@ const IndexPage = () => (
 
                 <LineBreak />
                 <h3> Largest voting areas for each country within the United Kingdom</h3>
+                <p>Each of these list the counties within each of England, Scotland, Wales, and Northern Ireland in the order of the most voted. However this is heavily skewed by city and county sizes.</p>
+                <p>However, it does interestingly show that England voted a lot more consistently across most counties, whilst Scotland, Wales and Northern Ireland both have a few large outliers and many more reserved areas.</p>
                 <h4>England</h4>
                 <VerticalBarSeriesArea
                     data={allArticle50Votes.edges[0].node}
@@ -130,6 +139,8 @@ const IndexPage = () => (
                     area={'N'}
                     height={500} />
 
+                <LineBreak />
+                <p>More coming soon... </p>
 
                 <LineBreak />
                 <p><i>Made with <a href="https://github.com/uber/react-vis">React-Vis</a></i></p>

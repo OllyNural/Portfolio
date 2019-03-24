@@ -22,7 +22,7 @@ export default class VerticalBarComponentArea extends Component {
             yType="ordinal"
             width={this.state.windowWidth * 0.85} 
             margin={{left: 200}}
-            height={500}>
+            height={600}>
             <VerticalGridLines />
             <HorizontalBarSeries
                     data={countryDataLog}
@@ -43,7 +43,7 @@ export default class VerticalBarComponentArea extends Component {
         sigsByCountry.sort((obj1, obj2) => {
             return obj2.x - obj1.x
         })
-        return sigsByCountry.slice(0, 25).reverse();
+        return sigsByCountry.slice(0, 30).reverse();
     }
 }
 
