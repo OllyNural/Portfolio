@@ -5,6 +5,7 @@ import '../../node_modules/react-vis/dist/style.css'
 import article50 from './article50.module.css'
 
 import Layout from '../components/layout'
+import SEO from '../components/seo'
 import LineBreak from '../components/line-break'
 import RadialChartCountry from '../components/article50/RadialChartCountryClass'
 import RadialChartArea from '../components/article50/RadialChartAreaClass'
