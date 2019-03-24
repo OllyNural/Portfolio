@@ -9,12 +9,16 @@ export default function Template({
     data,
 }) {
     const { markdownRemark: post } = data
+    const heroTitle = post.frontmatter.title.toUpperCase()
     return (
-        <div className={blogPost.container}>
+        <div>
             <Helmet title={`${post.frontmatter.title} - Oliver Nural`} />
-            <Img className={blogPost.heroImage} fluid={post.frontmatter.hero.childImageSharp.fluid} />
+            <div className={blogPost.heroContainer}>
+                <Img className={blogPost.heroImage} fluid={post.frontmatter.hero.childImageSharp.fluid} />
+                <h1 className={blogPost.heroTitle}>{heroTitle}</h1>
+            </div>
             <div className='blog-post'>
-                <h1>{post.frontmatter.title}</h1>
+                <h1>{post.frontmatter.title} </h1>
                 <div className='blog-post-content' dangerouslySetInnerHTML={{ __html: post.html }}>
                 </div>
             </div>

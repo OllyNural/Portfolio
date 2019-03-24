@@ -1,8 +1,5 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-import { Helmet } from "react-helmet"
-
-import Layout from '../components/layout'
 
 export default function Blog({ data }) {
     const { edges: posts } = data.allMarkdownRemark

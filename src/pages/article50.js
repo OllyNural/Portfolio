@@ -1,0 +1,142 @@
+import React from 'react'
+import { StaticQuery, graphql } from 'gatsby'
+
+import '../../node_modules/react-vis/dist/style.css'
+import article50 from './article50.module.css'
+
+import Layout from '../components/layout'
+import LineBreak from '../components/line-break'
+import RadialChartCountry from '../components/article50/RadialChartCountryClass'
+import RadialChartArea from '../components/article50/RadialChartAreaClass'
+import RadialChartAreaRatio from '../components/article50/RadialChartAreaRatioClass'
+import VerticalBarSeriesCountry from '../components/article50/VerticalBarSeriesCountry'
+import VerticalBarSeriesArea from '../components/article50/VerticalBarSeriesArea'
+
+const getIntro = () => (
+    <div>
+        <h1 className={article50.pageTitle} > Article50 petition data visualisation</h1>
+        <p> After being linked the petition below requesting to revoke Article 50, I thought it could be interesting to visualise some of the data provided by the government website.</p>
+        <p> This is my first attempt at any sort of data visualisation so feel free to request more graphs/send some feedback at <i>oliver.nural@gmail.com</i> </p>
+        <p> I haven't really done much styling, so realistically this is in as much of a mess as our country is. </p>
+    </div>
+)
+
+const getMetaData = ({ data, links }) => {
+    const selfLink = links.self
+    const voteLink = selfLink.slice(0, selfLink.length - 5)
+    const action = data.attributes.action;
+    const background = data.attributes.background;
+    const sigCount = data.attributes.signature_count;
+    return (
+        <div className="referendum-meta" >
+            <h2><a href={voteLink} className={article50.articleLink} target='article50'>{action}</a></h2>
+            <h3>Description</h3>
+            <p>{background}</p>
+            <p>Signature Count: <b><i>{sigCount}</i></b></p>
+            <p><i> This website has been generated from the data at: <a href={selfLink} target='article50'>{selfLink}</a> </i></p>
+        </div>
+    )
+}
+
+const IndexPage = () => (
+    <StaticQuery
+        query={graphql`
+        query {
+            allArticle50Votes(filter: {id: {ne: "dummy"}}) {
+              edges {
+                node {
+                  id
+                  links {
+                    self
+                  }
+                  data {
+                    type
+                    alternative_id
+                    attributes {
+                      action
+                      background
+                      signature_count
+                      signatures_by_country {
+                        name
+                        code
+                        signature_count
+                      }
+                      signatures_by_constituency {
+                        name
+                        ons_code
+                        mp
+                        signature_count
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        `}
+        render={({ allArticle50Votes }) => 
+            <Layout>
+                {getIntro()}
+                <LineBreak />
+                {getMetaData(allArticle50Votes.edges[0].node)}
+                <LineBreak />
+                <h3> Radial Chart of Votes by Country </h3>
+                <RadialChartCountry
+                    data={allArticle50Votes.edges[0].node}
+                    width={500}
+                    height={500} />
+
+                <h3> Logarithmic Bar Chart of Votes by Country </h3>
+                <VerticalBarSeriesCountry 
+                    data={allArticle50Votes.edges[0].node}
+                    width={500}
+                    height={500} />
+
+                <LineBreak />
+                <h3> Chart of Votes by country within the United Kingdom </h3>
+                <RadialChartArea
+                    data={allArticle50Votes.edges[0].node}
+                    width={500}
+                    height={500} />
+
+                <LineBreak />
+                <h3> Ratio of voters per country within the United Kingdom</h3>
+                <p><i>The populations were taken from: <a href="https://en.wikipedia.org/wiki/Countries_of_the_United_Kingdom_by_population" target="wiki">https://en.wikipedia.org/wiki/Countries_of_the_United_Kingdom_by_population </a></i></p>
+                <RadialChartAreaRatio
+                    data={allArticle50Votes.edges[0].node}
+                    width={500}
+                    height={500} />
+
+                <LineBreak />
+                <h3> Largest voting areas for each country within the United Kingdom</h3>
+                <h4>England</h4>
+                <VerticalBarSeriesArea
+                    data={allArticle50Votes.edges[0].node}
+                    area={'E'}
+                    height={500} />
+                <h4>Scotland</h4>
+                <VerticalBarSeriesArea
+                    data={allArticle50Votes.edges[0].node}
+                    area={'S'}
+                    height={500} />
+                <h4>Wales</h4>
+                <VerticalBarSeriesArea
+                    data={allArticle50Votes.edges[0].node}
+                    area={'W'}
+                    height={500} />
+                <h4>Northern Ireland</h4>
+                <VerticalBarSeriesArea
+                    data={allArticle50Votes.edges[0].node}
+                    area={'N'}
+                    height={500} />
+
+
+                <LineBreak />
+                <p><i>Made with <a href="https://github.com/uber/react-vis">React-Vis</a></i></p>
+            </Layout>
+        }
+        />
+
+)
+
+export default IndexPage

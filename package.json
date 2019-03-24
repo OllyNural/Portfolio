@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "fetch": "^1.1.0",
     "gatsby": "^2.0.76",
     "gatsby-image": "^2.0.20",
     "gatsby-plugin-catch-links": "^2.0.13",
@@ -13,6 +14,7 @@
     "gatsby-plugin-react-helmet": "^3.0.2",
     "gatsby-plugin-sharp": "^2.0.29",
     "gatsby-remark-images": "^3.0.10",
+    "gatsby-source-apiserver": "^2.1.1",
     "gatsby-source-filesystem": "^2.0.27",
     "gatsby-transformer-remark": "^2.3.4",
     "gatsby-transformer-sharp": "^2.1.8",
@@ -20,6 +22,7 @@
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-helmet": "^5.2.0",
+    "react-vis": "^1.11.6",
     "simplex-noise": "^2.4.0"
   },
   "keywords": [

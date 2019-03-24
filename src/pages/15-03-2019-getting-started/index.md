@@ -14,5 +14,5 @@ const x = () {
     console.log(hello)
 }
 ```
-Hello 
-![](./Italy-Oliver.jpg)
+<!-- Hello 
+![](./Italy-Oliver.jpg) -->

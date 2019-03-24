@@ -28,6 +28,52 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: 'gatsby-source-apiserver',
+      options: {
+        // Type prefix of entities from server
+        typePrefix: 'article50',
+  
+        // The url, this should be the endpoint you are attempting to pull data from
+        url: `https://petition.parliament.uk/petitions/241584.json`,
+  
+        method: 'get',
+  
+        headers: {
+          'Content-Type': 'application/json'
+        },
+  
+        // Name of the data to be downloaded.  Will show in graphQL or be saved to a file
+        // using this name. i.e. posts.json
+        name: `votes`,
+  
+        // Nested level of entities in response object, example: `data.posts`
+        // entityLevel: `data.posts`,
+  
+        // Define schemaType to normalize blank values
+        // example:
+        // const postType = {
+        //   id: 1,
+        //   name: 'String',
+        //   published: true,
+        //   object: {a: 1, b: '2', c: false},
+        //   array: [{a: 1, b: '2', c: false}]
+        // }
+        // schemaType: postType,
+        
+        // Optionally save the JSON data to a file locally
+        // Default is false
+        localSave: true,
+  
+        //  Required folder path where the data should be saved if using localSave option
+        //  This folder must already exist
+        path: `${__dirname}/src/data/`,
+  
+        // Optionally include some output when building
+        // Default is false
+        verboseOutput: true, // For debugging purposes
+      }
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',

@@ -1,0 +1,28 @@
+.pageTitle {
+    padding-top: 20px;
+}
+
+.articleLink::after {
+    width: 100%;
+    height: 2px;
+    color: #1D84B5
+}
+
+.articleLink {
+    color:#0D1F2D;
+}
+
+.articleLink:hover {
+    color:#1D84B5;
+}
+
+.articleLink::after{
+	opacity: 1;
+	transform: translate3d(0, 0, 0);
+	transition: transform .3s ease-out, opacity .3s ease-out;
+}
+
+.articleLink:hover::after{
+	opacity: 0;
+	transform: translate3d(0, 100%, 0);
+}
