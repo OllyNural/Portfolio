@@ -76,6 +76,7 @@ const IndexPage = () => (
         `}
         render={({ allArticle50Votes }) => 
             <Layout>
+                <SEO title="Oliver Nural | Article50 Data Visualisation" keywords={[`article50`, `petition`, `data visualisation`]} />
                 {getIntro()}
                 <LineBreak />
                 {getMetaData(allArticle50Votes.edges[0].node)}
