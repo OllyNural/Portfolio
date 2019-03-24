@@ -12,6 +12,7 @@ import RadialChartArea from '../components/article50/RadialChartAreaClass'
 import RadialChartAreaRatio from '../components/article50/RadialChartAreaRatioClass'
 import VerticalBarSeriesCountry from '../components/article50/VerticalBarSeriesCountry'
 import VerticalBarSeriesArea from '../components/article50/VerticalBarSeriesArea'
+import VerticalBarSeriesRatioConstituency from '../components/article50/VerticalBarSeriesRatioConstituency'
 
 const getIntro = () => (
     <div>
@@ -19,6 +20,7 @@ const getIntro = () => (
         <p> After being linked the petition below requesting to revoke Article 50, I thought it could be interesting to visualise some of the data provided by the government website.</p>
         <p> This is my first attempt at any sort of data visualisation so feel free to request more graphs/send some feedback at <i>oliver.nural@gmail.com</i> </p>
         <p> I haven't really done much styling, so realistically this is in as much of a mess as our country is. </p>
+        <p> <i> Disclaimer: This is purely the result of procrastination on a Saturday afternoon. </i> </p>
     </div>
 )
 
@@ -99,8 +101,8 @@ const IndexPage = () => (
 
 
                 <LineBreak />
-                <h3> Chart of Votes by country within the United Kingdom </h3>
-                <p> Upon first glance this looks like a massive amount of votes for England comparitive to other countries, but it does not take into account country population.</p>
+                <h3> Chart of Votes by constituency within the United Kingdom </h3>
+                <p> Upon first glance this looks like a massive amount of votes for England comparitive to other countries, but it does not take into account constituency population.</p>
                 <RadialChartArea
                     data={allArticle50Votes.edges[0].node}
                     width={500}
@@ -117,7 +119,7 @@ const IndexPage = () => (
                     height={500} />
 
                 <LineBreak />
-                <h3> Largest voting areas for each country within the United Kingdom</h3>
+                <h3> Largest voting areas for each constituency within the United Kingdom</h3>
                 <p>Each of these list the counties within each of England, Scotland, Wales, and Northern Ireland in the order of the most voted. However this is heavily skewed by city and county sizes.</p>
                 <p>However, it does interestingly show that England voted a lot more consistently across most counties, whilst Scotland, Wales and Northern Ireland both have a few large outliers and many more reserved areas.</p>
                 <h4>England</h4>
@@ -142,7 +144,21 @@ const IndexPage = () => (
                     height={500} />
 
                 <LineBreak />
-                <p>More coming soon... </p>
+                <h3> Ratio of voting areas for each constituency against population within the UK </h3>
+                <p><i>The population per constituency was found <a href="https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/parliamentaryconstituencymidyearpopulationestimates" target="constituencyvotes">here</a>.</i></p>
+                <p> Unfortunately, I could only currently find data for England and Wales. </p>
+                <h4>England</h4>
+                <VerticalBarSeriesRatioConstituency
+                    data={allArticle50Votes.edges[0].node}
+                    area={'E'}
+                    height={500} />
+
+                <h4>Wales</h4>
+                <VerticalBarSeriesRatioConstituency
+                    data={allArticle50Votes.edges[0].node}
+                    area={'W'}
+                    height={500} />
+
 
                 <LineBreak />
                 <p><i>Made with <a href="https://github.com/uber/react-vis">React-Vis</a></i></p>

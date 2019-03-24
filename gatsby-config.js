@@ -101,5 +101,22 @@ module.exports = {
         name: "pages",
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/data`,
+        name: "data",
+      },
+    },
+    `gatsby-transformer-excel`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-107313621-1",
+        sampleRate: 5,
+        siteSpeedSampleRate: 10,
+        cookieDomain: "olivernural.com",
+      },
+    },
   ],
 }
