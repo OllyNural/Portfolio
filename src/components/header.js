@@ -5,8 +5,8 @@ import React from 'react'
 const Header = ({ siteTitle }) => (
   <div
     style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
+      background: `#59A5D8`,
+      marginBottom: `1.15rem`,
     }}
   >
     <div

@@ -1,14 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
-import SimplexNoise from 'simplex-noise'
+// import SimplexNoise from 'simplex-noise'
 
-// import Header from './header'
+import Header from './header'
 // import BackgroundCanvas from './background-canvas';
 import './layout.css'
 
 const Layout = ({ children }) => {
-  let simplex = new SimplexNoise()
+  // let simplex = new SimplexNoise()
   return (
   <StaticQuery
     query={graphql`
@@ -23,7 +23,7 @@ const Layout = ({ children }) => {
     render={data => (
       <>
       <div style={{zIndex:1}} >
-        {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
+        <Header siteTitle={data.site.siteMetadata.title} />
         <div
           style={{
             display: 'flex',
