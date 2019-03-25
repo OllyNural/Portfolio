@@ -112,7 +112,7 @@ const IndexPage = () => (
                 <LineBreak />
                 <h3> Ratio of voters per country by population within the United Kingdom</h3>
                 <p><i>The populations were taken from: <a href="https://en.wikipedia.org/wiki/Countries_of_the_United_Kingdom_by_population" target="wiki">https://en.wikipedia.org/wiki/Countries_of_the_United_Kingdom_by_population </a></i></p>
-                <p> Interestingly the votes look a lot more even, with both Wales and Scotland actually voting more than England relative to their population.</p>
+                <p> Interestingly the votes look a lot more even, with Scotland actually voting more than England relative to their population.</p>
                 <RadialChartAreaRatio
                     data={allArticle50Votes.edges[0].node}
                     width={500}

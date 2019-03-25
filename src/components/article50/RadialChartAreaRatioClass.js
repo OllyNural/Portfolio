@@ -38,19 +38,19 @@ let sigs = [
 
 const legend = [
     {
-        title: "Wales",
-        color: constants.colours["W"]
-    },
-    {
-        title: "Scotland",
+        title: "1) Scotland",
         color: constants.colours["S"]
     },
     {
-        title: "England",
+        title: "2) England",
         color: constants.colours["E"]
     },
     {
-        title: "Northern Ireland",
+        title: "3) Wales",
+        color: constants.colours["W"]
+    },
+    {
+        title: "4) Northern Ireland",
         color: constants.colours["N"]
     },
 ]

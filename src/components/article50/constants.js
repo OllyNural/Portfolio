@@ -3,8 +3,8 @@ const constants = {
         // https://en.wikipedia.org/wiki/Countries_of_the_United_Kingdom_by_population
         England: 54786327,
         Scotland: 5373000,
-        NorthernIreland: 3099086,
-        Wales: 1851621,
+        Wales: 3099086,
+        NorthernIreland: 1851621,
     },
     colours: {
         'E': "#FF9833",
