@@ -19,7 +19,7 @@ const getIntro = () => (
         <h1 className={article50.pageTitle} > Article50 petition data Analysis</h1>
         <p> After being linked the petition below requesting to revoke Article 50, I thought it could be interesting to visualise some of the data provided by the government website.</p>
         <p> This is my first attempt at any sort of data visualisation/analysis so feel free to request more graphs/send some feedback at <i>oliver.nural@gmail.com</i> </p>
-        <p> I haven't really done much styling, so realistically this is in as much of a mess as our country is. </p>
+        {/* <p> I haven't really done much styling, so realistically this is in as much of a mess as our country is. </p> */}
         <p> <i> Disclaimer: This is purely the result of procrastination on a Saturday afternoon. </i> </p>
     </div>
 )
@@ -85,7 +85,7 @@ const IndexPage = () => (
                 {getMetaData(allArticle50Votes.edges[0].node)}
                 <LineBreak />
                 <h3> Radial Chart of Votes by Country </h3>
-                <p>Showing us that the UK accounted for the vast majority of votes is no suprise.</p>
+                <p>Showing us that the UK accounted for the vast majority of votes is no surprise.</p>
                 <RadialChartCountry
                     data={allArticle50Votes.edges[0].node}
                     width={500}
@@ -148,7 +148,7 @@ const IndexPage = () => (
                 <p><i>The population per constituency was found <a href="https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/parliamentaryconstituencymidyearpopulationestimates" target="constituencyvotes">here</a>.</i></p>
                 <p> The ratio of voters against total population of each constituency. </p>
                 <p> Unfortunately, I could only currently find data for England and Wales. </p>
-                <p><i> Investigating data sets as unsure if this graph does not match earlier ratio graph. </i></p>
+                <p><i><b> Investigating data sets as unsure if this graph does not match earlier ratio graph. </b></i></p>
                 <h4>England</h4>
                 <VerticalBarSeriesRatioConstituency
                     data={allArticle50Votes.edges[0].node}
