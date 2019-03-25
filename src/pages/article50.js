@@ -164,6 +164,8 @@ const IndexPage = () => (
 
                 <LineBreak />
                 <p><i>Made with <a href="https://github.com/uber/react-vis">React-Vis</a></i></p>
+                <LineBreak />
+                More coming soon...
             </Layout>
         }
         />
