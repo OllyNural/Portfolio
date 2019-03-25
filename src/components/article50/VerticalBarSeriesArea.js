@@ -29,7 +29,7 @@ export default class VerticalBarComponentArea extends Component {
                     height={this.props.height} 
                     color={constants.colours[this.props.area]}
                     />
-            <XAxis />
+            <XAxis title={`Number of voters per constituency`}/>
             <YAxis />
             </XYPlot>
         )

@@ -47,7 +47,7 @@ export default class VerticalBarComponentRatioConstituency extends Component {
                                 height={this.props.height} 
                                 color={constants.colours[this.props.area]}
                                 />
-                        <XAxis />
+                        <XAxis title={`% Percentage voters per constituency`} />
                         <YAxis />
                         </XYPlot>
                     )

@@ -119,7 +119,7 @@ const IndexPage = () => (
                     height={500} />
 
                 <LineBreak />
-                <h3> Largest voting areas for each constituency within the United Kingdom</h3>
+                <h3> Largest voting areas for each country within the United Kingdom</h3>
                 <p>Each of these list the constituencies within each of England, Scotland, Wales, and Northern Ireland in the order of the most voted. However this is heavily skewed by city and county sizes.</p>
                 <p>However, it does interestingly show that England voted a lot more consistently across most constituencies, whilst Scotland, Wales and Northern Ireland both have a few large outliers and many more reserved areas.</p>
                 <h4>England</h4>
