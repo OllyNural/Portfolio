@@ -1,14 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
-// import SimplexNoise from 'simplex-noise'
 
-import Header from './header'
-// import BackgroundCanvas from './background-canvas';
+// import Header from './header'
 import './layout.css'
+import layout from './layout.module.css'
 
 const Layout = ({ children }) => {
-  // let simplex = new SimplexNoise()
   return (
   <StaticQuery
     query={graphql`
@@ -21,31 +19,17 @@ const Layout = ({ children }) => {
       }
     `}
     render={data => (
-      <>
       <div style={{zIndex:1}} >
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            flexDirection: 'column',
-            margin: `0 auto`,
-            maxWidth: 960,
-            padding: `0px 1.0875rem 1.45rem`,
-            paddingTop: 0,
-          }}
-        >
+        {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
+        <div className={layout.mainDiv} >
           {children}
-          <footer>
+          {/* <footer>
             © {new Date().getFullYear()}, Built with
             {` `}
             <a href="https://www.gatsbyjs.org">Gatsby</a>
-          </footer>
+          </footer> */}
         </div>
       </div>
-      {/* <BackgroundCanvas noise={simplex} /> */}
-      </>
     )}
   />
 )}

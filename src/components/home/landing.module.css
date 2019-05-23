@@ -1,0 +1,55 @@
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: [first-col] 1fr [second-col] 1fr [third-col] 6fr [fourth-col] 1fr [fifth-col] 1fr;
+    grid-template-rows: [first-row] 1fr [second-row] 3fr [third-row] 1fr;
+    font-family: Roboto;
+    /* padding-top: 50px; */
+    /* overflow-x: hidden; */
+}
+
+.mainDiv {
+    background-color: #355691;
+    transform: rotate3d(1, 1, 1, -20deg);
+    /* transform: rotate(-20deg); */
+    grid-column: first-col / end;
+    grid-row: first-row / second-row;
+    z-index: 1;
+    overflow-x: hidden;
+    box-shadow: 0 0 5px;
+}
+
+.mainDiv2 {
+    background-color: #3F4045;
+    /* background-color: rgb(20, 20, 20); */
+    transform: rotate(20deg);
+    grid-column: first-col / end;
+    grid-row: second-row / third-row;
+    z-index: 2;
+    overflow-x: hidden;
+    box-shadow: 0 0 5px;
+}
+
+.mainText {
+    z-index: 5;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4em;
+    line-height: 1em;
+    mix-blend-mode: difference;
+    grid-column: first-col / end;
+    grid-row: second-row / third-row;
+    padding-left: 20px;
+}
+
+.mainDiv3 {
+    z-index: 4;
+    background-color: #009688;
+    transform: rotate(-40deg) translateX(20%) translateY(-50%);
+    grid-column: first-col / end;
+    grid-row: third-row / end;
+    overflow-x: hidden;
+    box-shadow: 0 0 5px;
+}

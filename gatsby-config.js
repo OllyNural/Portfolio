@@ -1,11 +1,13 @@
 module.exports = {
   siteMetadata: {
-    title: `Oliver Nural`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    title: `Oliver Nural Portfolio`,
+    name: `Oliver Nural`,
+    description: `Oliver Nural. Developer and Engineer by day. Asleep by night. DevOps enthusiast. Average dude.`,
     author: `@gatsbyjs`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-json`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -26,6 +28,22 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Spectral`
+          },
+          {
+            family: `Raleway`
+          },
+          {
+            family: `Roboto Slab`
+          },
+        ],
       },
     },
     {

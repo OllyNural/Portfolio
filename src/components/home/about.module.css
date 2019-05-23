@@ -1,0 +1,40 @@
+.container {
+    display: grid;
+    grid-template-rows: [first] 3fr [second] 10fr;
+    text-align: center;
+}
+
+.colContainer {
+    height: 100vh;
+    display: grid;
+    grid-row-start: second;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    align-items: center;
+    justify-items: center;
+}
+
+.header {
+    grid-row-start: first;
+    align-self: end;
+    text-align: center;
+    align-content: center;
+}
+
+.header > h1 {
+    font-size: 3.5em;
+    border-bottom: 5px solid currentColor;
+    display: inline-block;
+    align-self: center;
+}
+
+.singleCol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 240px;
+}
+
+.singleCol > h2 {
+    padding-top: 20px;
+}
