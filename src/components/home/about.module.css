@@ -1,23 +1,35 @@
 .container {
     display: grid;
-    grid-template-rows: [first] 3fr [second] 10fr;
+    grid-template-rows: [header] 2.3fr [info] 1.5fr [columns] minmax(280px, 6fr);
+    grid-row-gap: 2ch;
     text-align: center;
+    /* min-height: 70vh;
+    height: 90vh; */
 }
 
 .colContainer {
-    height: 100vh;
     display: grid;
-    grid-row-start: second;
+    grid-row-start: columns;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     align-items: center;
     justify-items: center;
 }
 
 .header {
-    grid-row-start: first;
+    grid-row-start: header;
     align-self: end;
     text-align: center;
     align-content: center;
+}
+
+.info {
+    max-width: 980px;
+    grid-row-start: info;
+    text-align: center;
+    align-self: center;
+    margin: 0 auto;
+    padding-right: 40px;
+    padding-left: 40px;
 }
 
 .header > h1 {
@@ -32,6 +44,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    align-self: start;
     width: 240px;
 }
 

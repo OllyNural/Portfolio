@@ -21,6 +21,11 @@ const About = () => {
           <div className={about.header}>
             <h1> What we do </h1>
           </div>
+          <div className={about.info}>
+            <p>We build beautiful user experiences that work on all devices, even the ones that don't exist yet.</p>
+            <p>Over <b>28,456</b> lines of code, and around <b>38</b> hot drinks consumed this week.</p>
+            <h4> See our process below... </h4>
+          </div>
           <div className={about.colContainer}>
             <div className={about.singleCol}>
               <Code size={`5em`}/>
