@@ -1,0 +1,82 @@
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 4fr 10fr 1fr;
+    grid-template-columns: [gutter] 4fr [low] 4fr [medium] 6fr [high] 4fr [gutter] 4fr;
+    background-color: #011936;
+    opacity: 0.9;
+    grid-column-gap: 1ch;
+}
+
+.model {
+    grid-row-start: 1;
+    grid-column: 1 / end;
+    align-self: center;
+    text-align: center;
+    color: #E8E9EB;
+}
+
+.option {
+    grid-row-start: 2;
+    border-radius: 10px;
+    background-color: #E8E9EB;
+    box-shadow: 0 0 10px;
+    text-align: center;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #011936;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+    width: 80%;
+}
+
+.currency {
+    color: #333333;
+    font-size: 2em;
+    font-family: 'Mandali', 'Raleway'
+}
+
+.price {
+    color: #333333;
+    font-size: 1.8em;
+    font-family: 'Mandali', 'Raleway'
+}
+
+.timecost {
+    color: #424242;
+    font-size: 1.2em;
+    font-family: 'Mandali', 'Raleway'
+}
+
+.low {
+    grid-column-start: low
+}
+
+.medium {
+    grid-column-start: medium;
+}
+
+.swell {
+    transform: scale(1.1);
+}
+
+.high {
+    grid-column-start: high
+}
+
+.ul {
+    list-style-type: none;
+    margin: 0;
+    margin-left: 10px;
+    padding: 0;
+}
+
+.swell > .ul > .li {
+    size: 4em;
+}
+
+.li {
+    text-align: left;
+}
