@@ -34,9 +34,16 @@ const styles = theme => ({
     marginBottom: '5%',
     width: '50%',
   },
+  gridIconsText: {
+    textAlign: 'center',
+  },
+  gridIconsContainer: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
+  },
   chip: {
     fontSize: '1.2em',
-    // margin: theme.spacing(1)
   },
 });
 
@@ -44,7 +51,11 @@ function SearchInput(props) {
   const { classes } = props;
 
   const [gridIconsState] = React.useState([
-    {key: '0', icon: <Loop />, label: 'DevOps', color: 'red', isFocused: 'outlined'},
+    {key: '0', icon: <Loop />, label: 'DevOps', color: '#231123', variant: 'outlined'},
+    {key: '1', icon: <Loop />, label: 'TDD', color: '#AF1B3F', variant: 'outlined'},
+    {key: '2', icon: <Loop />, label: 'Automation', color: '#558C8C', variant: 'outlined'},
+    {key: '3', icon: <Loop />, label: 'Pairing', color: '#004BA8', variant: 'outlined'},
+    {key: '4', icon: <Loop />, label: 'Another One', color: '#3D315B', variant: 'outlined'},
   ])
 
   function onInputChange(e) {
@@ -69,20 +80,26 @@ function SearchInput(props) {
           </IconButton>
         </Paper>
       </Grid>
-      <Grid item className={classes.gridIcons} xs={12}>
-        Or filter by tag
-        {gridIconsState.map(data => {
-          return (
-            <ChipIcon 
-              key={data.key}
-              avatar={<Avatar>{data.icon}</Avatar>}
-              label={data.label}
-              onClick={handleClick(data.label)}
-              variant={data.isFocused}
-              color={data.color}
-            />
-          )
-        })}
+      <Grid container item className={classes.gridIcons} xs={12}>
+        <Grid item xs={12} className={classes.gridIconsText} >
+          <h2>Or filter by tag</h2>
+        </Grid>
+        <Grid container className={classes.gridIconsContainer} spacing={2} >
+          {gridIconsState.map(data => {
+            return (
+              <Grid item>
+                <ChipIcon 
+                  key={data.key}
+                  avatar={<Avatar>{data.icon}</Avatar>}
+                  label={data.label}
+                  onClick={handleClick(data.label)}
+                  variant={data.variant}
+                  color={data.color}
+                />
+              </Grid>
+            )
+          })}
+        </Grid>
       </Grid>
     </React.Fragment>
   )

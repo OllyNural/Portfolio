@@ -1,0 +1,4 @@
+Lambda array function vs old function dealing with currying
+
+Colours get duplicated when programatically creating the tag chips for searching 
+- all use the last colour defined, scoping error?

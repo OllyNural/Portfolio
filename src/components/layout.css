@@ -23,3 +23,8 @@ h1 {
     font-size: 6vmin;
     line-height: 'normal';
 }
+
+h2 {
+    font-family: -apple-system, Cutive, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}

@@ -34,9 +34,22 @@ function HomeContainer(props) {
     setSearchFieldData(text)
   }
 
-  function onTagUpdate(tags) {
-    console.log(tags)
-    setTagData([...tags])
+  function onTagUpdate(tag) {
+    console.log(tag)
+    console.log(tagData)
+    let index = tagData.indexOf(tag)
+    if (index === -1) {
+      console.log(tagData)
+      setTagData(prevState => [...prevState, tag])
+    } else {
+      let array = tagData.filter(item => item !== tag)
+      setTagData(array)
+    }
+    console.log('end')
+
+
+    // tagData.indexOf(tag) === -1 ? setTagData([...tag]) : setTagData(tagData[]) 
+    // setTagData([...tag])
   }
 
   return (
