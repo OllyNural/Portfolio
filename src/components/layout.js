@@ -5,6 +5,9 @@
  * See: https://www.gatsbyjs.org/docs/static-query/
  */
 
+import 'typeface-cutive'
+import 'typeface-aleo'
+
 import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
