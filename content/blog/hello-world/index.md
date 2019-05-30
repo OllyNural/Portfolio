@@ -2,6 +2,7 @@
 title: Hello World
 date: "2015-06-01T22:12:03.284Z"
 description: Hello World Blog Post!
+tags: ["DevOps", "Test Driven Development"]
 ---
 
 This is my first post on my new fake blog! How exciting!

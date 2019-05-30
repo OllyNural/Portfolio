@@ -59,7 +59,7 @@ function HomeContainer(props) {
       <Transition in={isSearch()} timeout={500}>
         {(state) => (
           <Grid className={`${classes.fadeBase} ${classes[state]}`} container item xs={12}>
-            <SearchBase />
+            <SearchBase tagData={tagData} searchFieldData={searchFieldData} />
           </Grid>
         )}
       </Transition>

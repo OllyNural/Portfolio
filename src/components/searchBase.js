@@ -26,7 +26,7 @@ function HomeHero(props) {
       {
         allMarkdownRemark(
           sort: { fields: [frontmatter___date], order: DESC }
-          limit: 10
+          limit: 1000
         ) {
           edges {
             node {
@@ -37,6 +37,7 @@ function HomeHero(props) {
                 date(formatString: "MMMM DD, YYYY")
                 title
                 description
+                tags
               }
             }
           }
@@ -49,7 +50,7 @@ function HomeHero(props) {
         return (
           <React.Fragment>
             <Grid className={classes.gridRoot} item xs={12} md={5}>
-              {posts.map(({ node }) => {
+              {posts.filter(({ node }) => props.tagData.some(tag => node.frontmatter.tags.includes(tag))).map(({ node }) => {
                 const title = node.frontmatter.title || node.fields.slug
                 return (
                   <Paper key={node.fields.slug}>
