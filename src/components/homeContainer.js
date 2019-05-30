@@ -49,14 +49,14 @@ function HomeContainer(props) {
   return (
     <React.Fragment>
       <SearchInput onSubmitText={onSubmitText} onTagUpdate={onTagUpdate}/>
-      <Transition in={!isSearch()} timeout={500}>
+      <Transition in={!isSearch()} timeout={250}>
         {(state) => (
           <Grid className={`${classes.fadeBase} ${classes[state]}`} container item hidden xs={12} >
             <HomeBase />
           </Grid>
         )}
       </Transition>
-      <Transition in={isSearch()} timeout={500}>
+      <Transition in={isSearch()} timeout={250}>
         {(state) => (
           <Grid className={`${classes.fadeBase} ${classes[state]}`} container item xs={12}>
             <SearchBase tagData={tagData} searchFieldData={searchFieldData} />
