@@ -3,7 +3,8 @@ import { withStyles } from "@material-ui/core";
 import Grid from "@material-ui/core/Grid"
 
 import SearchInput from "./searchInput"
-import HomeHero from "./homeHero"
+import HomeBase from "./homeBase"
+import SearchBase from "./searchBase"
 
 import { Transition } from "react-transition-group";
 
@@ -36,20 +37,13 @@ function HomeContainer(props) {
 
   function onTagUpdate(tag) {
     console.log(tag)
-    console.log(tagData)
     let index = tagData.indexOf(tag)
     if (index === -1) {
-      console.log(tagData)
       setTagData(prevState => [...prevState, tag])
     } else {
       let array = tagData.filter(item => item !== tag)
       setTagData(array)
     }
-    console.log('end')
-
-
-    // tagData.indexOf(tag) === -1 ? setTagData([...tag]) : setTagData(tagData[]) 
-    // setTagData([...tag])
   }
 
   return (
@@ -58,14 +52,14 @@ function HomeContainer(props) {
       <Transition in={!isSearch()} timeout={500}>
         {(state) => (
           <Grid className={`${classes.fadeBase} ${classes[state]}`} container item hidden xs={12} >
-            <HomeHero />
+            <HomeBase />
           </Grid>
         )}
       </Transition>
       <Transition in={isSearch()} timeout={500}>
         {(state) => (
           <Grid className={`${classes.fadeBase} ${classes[state]}`} container item xs={12}>
-            Search Container
+            <SearchBase />
           </Grid>
         )}
       </Transition>
