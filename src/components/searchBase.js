@@ -2,7 +2,6 @@ import React from "react";
 import { withStyles } from "@material-ui/styles";
 import { Paper, Grid, Link } from "@material-ui/core";
 
-import Image from "../components/image"
 import { StaticQuery, graphql } from "gatsby";
 
 const styles = theme => ({
