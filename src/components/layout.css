@@ -37,7 +37,7 @@ h1 {
   align-items: center;
   justify-content: center;
   font-family: Cutive;
-  font-weight: bold;
+  /* font-weight: bold; */
   text-rendering: optimizeLegibility;
   font-size: 6vmin;
   line-height: 'normal';

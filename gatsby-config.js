@@ -68,6 +68,23 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     `gatsby-plugin-offline`,
     // {
+    //   resolve: `gatsby-plugin-styled-components`,
+    //   options: {
+    //     // Add any options here
+    //   },
+    // },
+    {
+      resolve: `gatsby-plugin-material-ui`,
+      // If you want to use styled components, in conjunction to Material-UI, you should:
+      // - Change the injection order
+      // - Add the plugin
+      options: {
+        // stylesProvider: {
+        //   injectFirst: true,
+        // },
+      },
+    },
+    // {
     //   resolve: 'gatsby-plugin-web-font-loader',
     //   options: {
     //     custom: {
