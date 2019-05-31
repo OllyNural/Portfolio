@@ -1,25 +1,15 @@
 import React from "react";
+import { StaticQuery, graphql } from "gatsby"
 import { withStyles } from "@material-ui/styles";
-import { Paper, Grid, Link } from "@material-ui/core";
+import { Paper, Grid } from "@material-ui/core";
 
-import Image from "../components/image"
-import { StaticQuery, graphql } from "gatsby";
+import Image from "./image"
+import BlogEntry from "./blogEntry"
 
 const styles = theme => ({
-  gridRoot: {
-    // padding: '10px'
-  },
-  homeCard: {
-
-  },
-  image: {
-    // marginLeft: '12px',
-  }
 })
 
 function HomeBase(props) {
-  const { classes } = props;
-
   return (
     <StaticQuery
       query={graphql`
@@ -46,49 +36,26 @@ function HomeBase(props) {
       render={(data) => {
         const posts = data.allMarkdownRemark.edges
 
-        
-
         return (
           <React.Fragment>
-            <Grid className={classes.gridRoot} item xs={12} md={12}>
+            <Grid item xs={12} sm={3}>
               <Paper>
                 <Grid container>
-                  <Grid className={classes.image} item xs={12} sm={6}>
+                  <Grid item xs={6} sm={12}>
                     <Image />
                   </Grid>
-                  <Grid item xs={12} sm={6}>
-                    <h2>Hello <span role="img" aria-label="Emoji Wave">👋</span> </h2>
-
-                    <p> Welcome to my blog! </p>
-
-                    <p> This is a blog aimed at Junior Developers, aiming to demystify </p>
-
-                    <p> This blog aims to </p>
-
-                    <h2> About Me </h2>
-                    <p> My name is Oliver Nural</p>
-                    <p> I am a full stack Javascript engineer with a specialisation in DevOps practices and environments. </p>
+                  <Grid item xs={6} sm={12}>
+                    About me
                   </Grid>
                 </Grid>
+
               </Paper>
             </Grid>
-            <Grid className={classes.gridRoot} item xs={12} md={5}>
+            <Grid item xs={12} sm={9}>
               {posts.map(({ node }) => {
                 const title = node.frontmatter.title || node.fields.slug
                 return (
-                  <Paper key={node.fields.slug}>
-                    <h3>
-                      <Link to={node.fields.slug}>
-                        {title}
-                      </Link>
-                    </h3>
-                    <small>{node.frontmatter.date}</small>
-                    <p
-                      dangerouslySetInnerHTML={{
-                        __html: node.frontmatter.description || node.excerpt,
-                      }}
-                    />
-                  </Paper>
+                  <BlogEntry slug={node.fields.slug} title={title} date={node.frontmatter.date} description={node.frontmatter.description} excerpt={node.excerpt} />
                 )
               })}
             </Grid>

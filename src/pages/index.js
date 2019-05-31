@@ -5,7 +5,7 @@ import Grid from "@material-ui/core/Grid"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import HomeContainer from "../components/homeContainer"
-import { Link } from "@material-ui/core";
+import About from "../components/about"
 
 const styles = theme => ({
   heading: {
@@ -13,13 +13,6 @@ const styles = theme => ({
     marginBottom: '20px',
     textAlign: 'center'
   },
-  subHeading: {
-    fontSize: '1.75em',
-    fontFamily: 'Aleo'
-  },
-  hidden: {
-    display: 'none',
-  }
 })
 
 // const IndexPage = props => {
@@ -29,16 +22,14 @@ function IndexPage(props) {
   return (
     <Layout>
       <SEO title="Home" />
-
       <Grid container spacing={3}>
         <Grid item className={classes.heading} xs={12}>
-          <h1><Link color='inherit' underline='none' href="/">THE JUNIOR DEV</Link></h1>
-          <span className={classes.subHeading}> A blog demystifying development </span>
+          <About />
         </Grid>
-        <HomeContainer />
+        <Grid container item className={classes.heading} xs={12}>
+          <HomeContainer />
+        </Grid>
       </Grid>
-
-      {/* <Link to="/page-2/">Go to page 2</Link> */}
     </Layout>
   )
 }

@@ -1,8 +1,8 @@
 import React from "react";
 import { withStyles, ThemeProvider } from "@material-ui/styles";
 import { createMuiTheme } from '@material-ui/core/styles'
-
-import { Chip } from "@material-ui/core";
+import { Chip, Avatar } from "@material-ui/core";
+import Check from "@material-ui/icons/Check"
 
 const styles = theme => ({
   chip: {
@@ -12,7 +12,6 @@ const styles = theme => ({
 
 function GridIcon(props) {
   const { classes } = props;
-  // classes.chip.colorPrimary = props.color;
 
   let theme = createMuiTheme({
     palette: {
@@ -21,8 +20,6 @@ function GridIcon(props) {
       },
     }
   });
-  console.log(props)
-  console.log(theme)
 
   const [iconState, setIconState] = React.useState({
     selected: false,
@@ -37,11 +34,16 @@ function GridIcon(props) {
     })
   }
 
+  const avatar = () => (
+    // <Avatar><CheckCircleOutline /></Avatar>
+    <Avatar><Check /></Avatar>
+  )
+
   return (
     <ThemeProvider theme={theme}>
       <Chip
         key={props.key}
-        // avatar={<Avatar>{props.icon}</Avatar>}
+        avatar={iconState.selected ? avatar() : null}
         label={props.label}
         onClick={handleClick}
         className={classes.chip}

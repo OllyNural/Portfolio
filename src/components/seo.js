@@ -10,9 +10,6 @@ import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-// import CutiveFontUrl from "../../static/fonts/cutive-latin-400.woff2"
-// import AleoFontUrl from "../../static/fonts/aleo-latin-400.woff2"
-
 function SEO({ description, lang, meta, title }) {
   const { site } = useStaticQuery(
     graphql`

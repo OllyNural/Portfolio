@@ -1,9 +1,7 @@
 import React from "react";
 import { withStyles } from "@material-ui/styles";
-import Loop from "@material-ui/icons/Loop"
 import SearchIcon from "@material-ui/icons/Search"
-
-import { Paper, InputBase, Grid, Avatar, IconButton } from "@material-ui/core";
+import { Paper, InputBase, Grid, IconButton } from "@material-ui/core";
 
 import ChipIcon from "./chipIcon.js";
 
@@ -51,11 +49,11 @@ function SearchInput(props) {
   const { classes } = props;
 
   const [gridIconsState] = React.useState([
-    {key: '0', icon: <Loop />, label: 'DevOps', color: '#231123', variant: 'outlined'},
-    {key: '1', icon: <Loop />, label: 'TDD', color: '#AF1B3F', variant: 'outlined'},
-    {key: '2', icon: <Loop />, label: 'Automation', color: '#558C8C', variant: 'outlined'},
-    {key: '3', icon: <Loop />, label: 'Pairing', color: '#004BA8', variant: 'outlined'},
-    {key: '4', icon: <Loop />, label: 'Another One', color: '#3D315B', variant: 'outlined'},
+    {key: '0', label: 'DevOps', color: '#231123', variant: 'outlined'},
+    {key: '1', label: 'TDD', color: '#AF1B3F', variant: 'outlined'},
+    {key: '2', label: 'Automation', color: '#558C8C', variant: 'outlined'},
+    {key: '3', label: 'Pairing', color: '#004BA8', variant: 'outlined'},
+    {key: '4', label: 'Another One', color: '#3D315B', variant: 'outlined'},
   ])
 
   function onInputChange(e) {
@@ -90,7 +88,6 @@ function SearchInput(props) {
               <Grid item>
                 <ChipIcon 
                   key={data.key}
-                  avatar={<Avatar>{data.icon}</Avatar>}
                   label={data.label}
                   onClick={handleClick(data.label)}
                   variant={data.variant}

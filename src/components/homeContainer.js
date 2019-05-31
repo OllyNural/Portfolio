@@ -1,12 +1,11 @@
 import React from "react"
 import { withStyles } from "@material-ui/core";
 import Grid from "@material-ui/core/Grid"
+import { Transition } from "react-transition-group";
 
 import SearchInput from "./searchInput"
 import HomeBase from "./homeBase"
 import SearchBase from "./searchBase"
-
-import { Transition } from "react-transition-group";
 
 const styles = theme => ({
   fadeBase: {
@@ -14,7 +13,7 @@ const styles = theme => ({
     opacity: 0,
   },
   entering: { opacity: 0, display: 'none' },
-  entered:  { opacity: 1 , display: 'block'},
+  entered:  { opacity: 1 , display: 'flex'},
   exited:   { opacity: 0, display: 'none'},
 })
 
@@ -51,14 +50,14 @@ function HomeContainer(props) {
       <SearchInput onSubmitText={onSubmitText} onTagUpdate={onTagUpdate}/>
       <Transition in={!isSearch()} timeout={250}>
         {(state) => (
-          <Grid className={`${classes.fadeBase} ${classes[state]}`} container item hidden xs={12} >
+          <Grid container item spacing={1} className={`${classes.fadeBase} ${classes[state]}`}>
             <HomeBase />
           </Grid>
         )}
       </Transition>
       <Transition in={isSearch()} timeout={250}>
         {(state) => (
-          <Grid className={`${classes.fadeBase} ${classes[state]}`} container item xs={12}>
+          <Grid container item spacing={1} className={`${classes.fadeBase} ${classes[state]}`}>
             <SearchBase tagData={tagData} searchFieldData={searchFieldData} />
           </Grid>
         )}

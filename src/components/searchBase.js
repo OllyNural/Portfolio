@@ -1,8 +1,9 @@
 import React from "react";
 import { withStyles } from "@material-ui/styles";
-import { Paper, Grid, Link } from "@material-ui/core";
-
+import { Grid } from "@material-ui/core";
 import { StaticQuery, graphql } from "gatsby";
+
+import BlogEntry from "./blogEntry";
 
 const styles = theme => ({
   gridRoot: {
@@ -52,19 +53,7 @@ function HomeHero(props) {
               {posts.filter(({ node }) => props.tagData.some(tag => node.frontmatter.tags.includes(tag))).map(({ node }) => {
                 const title = node.frontmatter.title || node.fields.slug
                 return (
-                  <Paper key={node.fields.slug}>
-                    <h3>
-                      <Link to={node.fields.slug}>
-                        {title}
-                      </Link>
-                    </h3>
-                    <small>{node.frontmatter.date}</small>
-                    <p
-                      dangerouslySetInnerHTML={{
-                        __html: node.frontmatter.description || node.excerpt,
-                      }}
-                    />
-                  </Paper>
+                  <BlogEntry slug={node.fields.slug} title={title} date={node.frontmatter.date} description={node.frontmatter.description} excerpt={node.excerpt} />
                 )
               })}
             </Grid>
