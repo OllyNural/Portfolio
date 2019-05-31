@@ -71,7 +71,8 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         custom: {
-          families: ['Cutive', 'Aleo']
+          families: ['Cutive', 'Aleo'],
+          urls: ['fonts.css']
         }
       }
     },

@@ -10,6 +10,9 @@ import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
+// import CutiveFontUrl from "../fonts/cutive-latin-400.woff2"
+// import AleoFontUrl from "../fonts/aleo-latin-400.woff2"
+
 function SEO({ description, lang, meta, title }) {
   const { site } = useStaticQuery(
     graphql`
@@ -69,16 +72,16 @@ function SEO({ description, lang, meta, title }) {
         },
       ].concat(meta)}
     >
-      <link rel="preload"
+      {/* <link rel="preload"
             as="font"
-            href="../fonts/cutive-latin-400.woff2"
+            href={CutiveFontUrl}
             type="font/woff2"
             crossOrigin="anonymous" />
       <link rel="preload"
             as="font"
-            href="../fonts/aleo-latin-400.woff2"
+            href={AleoFontUrl}
             type="font/woff2"
-            crossOrigin="anonymous" />
+            crossOrigin="anonymous" /> */}
     </Helmet>
   )
 }
