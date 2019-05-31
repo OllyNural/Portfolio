@@ -1,29 +1,3 @@
-/* aleo-400normal - latin */
-/* @font-face {
-  font-family: 'Aleo';
-  font-style: normal;
-  font-display: swap;
-  font-weight: 400;
-  src:
-    local('Aleo Regular '),
-    local('Aleo-Regular'),
-    url('../../static/fonts/aleo-latin-400.woff2') format('woff2'),
-    url('../../static/fonts/aleo-latin-400.woff') format('woff');
-} */
-
-/* cutive-400normal - latin */
-/* @font-face {
-font-family: 'Cutive';
-font-style: normal;
-font-display: swap;
-font-weight: 400;
-src:
-  local('Cutive Regular '),
-  local('Cutive-Regular'),
-  url('../../static/fonts/cutive-latin-400.woff2') format('woff2'),
-  url('../../static/fonts/cutive-latin-400.woff') format('woff');
-} */
-
 h1 {
   margin-left: 0;
   margin-right: 0;
@@ -37,7 +11,7 @@ h1 {
   align-items: center;
   justify-content: center;
   font-family: Cutive;
-  /* font-weight: bold; */
+  font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 6vmin;
   line-height: 'normal';
