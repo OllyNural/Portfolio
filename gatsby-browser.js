@@ -5,6 +5,7 @@
  */
 
 
-// require('typeface-cutive');
-// require('typeface-aleo');
+require('typeface-cutive');
+require('typeface-aleo');
 require("prismjs/themes/prism-tomorrow.css")
+// import "./static/fonts.css"

@@ -32,7 +32,7 @@ function IndexPage(props) {
 
       <Grid container spacing={3}>
         <Grid item className={classes.heading} xs={12}>
-          <h1><Link color='inherit' underline='none' className={classes.link} href="/">THE JUNIOR DEV</Link></h1>
+          <h1><Link color='inherit' underline='none' href="/">THE JUNIOR DEV</Link></h1>
           <span className={classes.subHeading}> A blog demystifying development </span>
         </Grid>
         <HomeContainer />

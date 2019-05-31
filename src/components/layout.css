@@ -1,5 +1,5 @@
 /* aleo-400normal - latin */
-@font-face {
+/* @font-face {
   font-family: 'Aleo';
   font-style: normal;
   font-display: swap;
@@ -22,7 +22,7 @@ src:
   local('Cutive-Regular'),
   url('../../static/fonts/cutive-latin-400.woff2') format('woff2'),
   url('../../static/fonts/cutive-latin-400.woff') format('woff');
-}
+} */
 
 h1 {
   margin-left: 0;
