@@ -1,23 +1,3 @@
-h1 {
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    margin-bottom: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: -apple-system, Cutive, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    font-weight: bold;
-    text-rendering: optimizeLegibility;
-    font-size: 6vmin;
-    line-height: 'normal';
-}
-
 /* aleo-400normal - latin */
 @font-face {
   font-family: 'Aleo';
@@ -44,9 +24,27 @@ src:
   url('../../static/fonts/cutive-latin-400.woff') format('woff');
 }
 
+h1 {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Cutive;
+  font-weight: bold;
+  text-rendering: optimizeLegibility;
+  font-size: 6vmin;
+  line-height: 'normal';
+}
+
 h2 {
-    font-family: -apple-system, Cutive, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: Cutive;
 }
 
 html {
