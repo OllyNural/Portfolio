@@ -68,7 +68,18 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
       ].concat(meta)}
-    />
+    >
+      <link rel="preload"
+            as="font"
+            href="../fonts/cutive-latin-400.woff2"
+            type="font/woff2"
+            crossOrigin="anonymous" />
+      <link rel="preload"
+            as="font"
+            href="../fonts/aleo-latin-400.woff2"
+            type="font/woff2"
+            crossOrigin="anonymous" />
+    </Helmet>
   )
 }
 
