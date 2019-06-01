@@ -8,11 +8,14 @@ import HomeContainer from "../components/homeContainer"
 import About from "../components/about"
 
 const styles = theme => ({
-  heading: {
+  aboutHeading: {
     marginTop: '50px',
     marginBottom: '20px',
     textAlign: 'center'
   },
+  homeHeading: {
+    marginTop: 0,
+  }
 })
 
 // const IndexPage = props => {
@@ -23,10 +26,10 @@ function IndexPage(props) {
     <Layout>
       <SEO title="Home" />
       <Grid container spacing={3}>
-        <Grid item className={classes.heading} xs={12}>
+        <Grid item className={classes.aboutHeading} xs={12}>
           <About />
         </Grid>
-        <Grid container className={classes.heading} spacing={1} >
+        <Grid container className={classes.homeHeading} spacing={1} >
           <HomeContainer />
         </Grid>
       </Grid>

@@ -8,17 +8,18 @@ import ChipIcon from "./chipIcon.js";
 const styles = theme => ({
   gridSearch: {
     display: 'flex',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   paper: {
     display: 'flex',
     alignItems: 'center',
     width: '100%',
+    borderTopRightRadius: '25px',
+    borderBottomRightRadius: '25px',
   },
   input: {
     marginLeft: 8,
     flex: 1,
-    fontSize: '1.2em',
   },
   iconButton: {
     '& svg': {
@@ -41,7 +42,7 @@ const styles = theme => ({
     justifyContent: 'center',
   },
   chip: {
-    fontSize: '1.2em',
+    // fontSize: '1.2em',
   },
 });
 

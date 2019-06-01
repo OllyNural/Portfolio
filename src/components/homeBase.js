@@ -38,7 +38,7 @@ function HomeBase(props) {
 
         return (
           <React.Fragment>
-            <Grid item xs={12} sm={3}>
+            <Grid item xs={12} sm={4}>
               <Paper>
                 <Grid container>
                   <Grid item xs={6} sm={12}>
@@ -51,7 +51,7 @@ function HomeBase(props) {
 
               </Paper>
             </Grid>
-            <Grid item xs={12} sm={9}>
+            <Grid item xs={12} sm={8}>
               {posts.map(({ node }) => {
                 const title = node.frontmatter.title || node.fields.slug
                 return (
