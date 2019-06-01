@@ -7,6 +7,7 @@ const styles = theme => ({
   blogEntry: {
     textAlign: 'left',
     paddingLeft: '30px',
+    paddingRight: '30px',
   },
   blogTitle: {
     marginTop: 0,
