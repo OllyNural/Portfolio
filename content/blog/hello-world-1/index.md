@@ -1,8 +1,8 @@
 ---
 title: Hello World 1
-date: "2015-05-01T22:12:03.284Z"
+date: "2015-06-01T22:12:03.284Z"
 description: Hello World Blog Post!
-tags: ["DevOps", "Automation", "Another One"]
+tags: ["DevOps", "Automation", "TDD"]
 ---
 
 This is my first post on my new fake blog! How exciting!

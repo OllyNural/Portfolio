@@ -26,7 +26,7 @@ function IndexPage(props) {
         <Grid item className={classes.heading} xs={12}>
           <About />
         </Grid>
-        <Grid container item className={classes.heading} xs={12}>
+        <Grid container className={classes.heading} spacing={1} >
           <HomeContainer />
         </Grid>
       </Grid>

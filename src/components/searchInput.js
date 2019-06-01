@@ -13,7 +13,7 @@ const styles = theme => ({
   paper: {
     display: 'flex',
     alignItems: 'center',
-    width: '50%',
+    width: '100%',
   },
   input: {
     marginLeft: 8,
@@ -53,7 +53,7 @@ function SearchInput(props) {
     {key: '1', label: 'TDD', color: '#AF1B3F', variant: 'outlined'},
     {key: '2', label: 'Automation', color: '#558C8C', variant: 'outlined'},
     {key: '3', label: 'Pairing', color: '#004BA8', variant: 'outlined'},
-    {key: '4', label: 'Another One', color: '#3D315B', variant: 'outlined'},
+    {key: '4', label: 'Musings', color: '#3D315B', variant: 'outlined'},
   ])
 
   function onInputChange(e) {
@@ -70,22 +70,24 @@ function SearchInput(props) {
 
   return (
     <React.Fragment>
-      <Grid item className={classes.gridSearch} xs={12}>
-        <Paper className={classes.paper} >
-          <InputBase onKeyDown={onInputChange} onChange={onInputChange} autoFocus className={classes.input} placeholder="Search all articles by keywords" />
-          <IconButton className={classes.iconButton} aria-label="Search">
-            <SearchIcon />
-          </IconButton>
-        </Paper>
+      <Grid item container className={classes.gridSearch} xs={12} >
+        <Grid item xs={12} sm={6}>
+          <Paper className={classes.paper} >
+            <InputBase onKeyDown={onInputChange} onChange={onInputChange} autoFocus className={classes.input} placeholder="Search all articles by keywords" />
+            <IconButton className={classes.iconButton} aria-label="Search">
+              <SearchIcon />
+            </IconButton>
+          </Paper>
+        </Grid>
       </Grid>
       <Grid container item className={classes.gridIcons} xs={12}>
         <Grid item xs={12} className={classes.gridIconsText} >
-          <h2>Or filter by tag</h2>
+          Or filter by tag
         </Grid>
         <Grid container className={classes.gridIconsContainer} spacing={2} >
           {gridIconsState.map(data => {
             return (
-              <Grid item>
+              <Grid key={data.key} item>
                 <ChipIcon 
                   key={data.key}
                   label={data.label}

@@ -5,9 +5,6 @@ import { Chip, Avatar } from "@material-ui/core";
 import Check from "@material-ui/icons/Check"
 
 const styles = theme => ({
-  chip: {
-    fontSize: '1.2em',
-  },
 })
 
 function GridIcon(props) {
@@ -35,7 +32,6 @@ function GridIcon(props) {
   }
 
   const avatar = () => (
-    // <Avatar><CheckCircleOutline /></Avatar>
     <Avatar><Check /></Avatar>
   )
 

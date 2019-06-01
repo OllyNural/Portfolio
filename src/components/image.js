@@ -12,10 +12,6 @@ import Img from "gatsby-image"
  * - `gatsby-image`: https://gatsby.dev/gatsby-image
  * - `StaticQuery`: https://gatsby.dev/staticquery
  */
-  // placeholderImage: file(relativePath: { eq: "gatsby-astronaut.png" }) {
-  // placeholderImage: file(relativePath: { eq: "gatsby-astronaut.png" }) {
-  // placeholderImage: file(relativePath: { eq: "gatsby-astronaut.png" }) {
-  // placeholderImage: file(relativePath: { eq: "gatsby-astronaut.png" }) {
 
 const Image = () => (
   <StaticQuery
