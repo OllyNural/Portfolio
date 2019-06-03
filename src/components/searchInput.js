@@ -14,8 +14,8 @@ const styles = theme => ({
     display: 'flex',
     alignItems: 'center',
     width: '100%',
-    borderTopRightRadius: '25px',
-    borderBottomRightRadius: '25px',
+    // borderTopRightRadius: '25px',
+    // borderBottomRightRadius: '25px',
   },
   input: {
     marginLeft: 8,
@@ -35,6 +35,7 @@ const styles = theme => ({
   },
   gridIconsText: {
     textAlign: 'center',
+    marginBottom: '10px',
   },
   gridIconsContainer: {
     display: 'flex',
@@ -50,11 +51,11 @@ function SearchInput(props) {
   const { classes } = props;
 
   const [gridIconsState] = React.useState([
-    {key: '0', label: 'DevOps', color: '#231123', variant: 'outlined'},
-    {key: '1', label: 'TDD', color: '#AF1B3F', variant: 'outlined'},
-    {key: '2', label: 'Automation', color: '#558C8C', variant: 'outlined'},
-    {key: '3', label: 'Pairing', color: '#004BA8', variant: 'outlined'},
-    {key: '4', label: 'Musings', color: '#3D315B', variant: 'outlined'},
+    {key: '0', label: 'DevOps', color: '#231123', variant: 'default'},
+    {key: '1', label: 'TDD', color: '#AF1B3F', variant: 'default'},
+    {key: '2', label: 'Automation', color: '#558C8C', variant: 'default'},
+    {key: '3', label: 'Pairing', color: '#004BA8', variant: 'default'},
+    {key: '4', label: 'Musings', color: '#3D315B', variant: 'default'},
   ])
 
   function onInputChange(e) {

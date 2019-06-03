@@ -17,7 +17,7 @@ const styles = theme => ({
   }
 })
 
-function HomeHero(props) {
+function SearchBase(props) {
   const { classes } = props;
 
   return (
@@ -49,11 +49,11 @@ function HomeHero(props) {
 
         return (
           <React.Fragment>
-            <Grid className={classes.gridRoot} item xs={12} md={5}>
+            <Grid className={classes.gridRoot} item xs={12} md={12}>
               {posts.filter(({ node }) => props.tagData.some(tag => node.frontmatter.tags.includes(tag))).map(({ node }) => {
                 const title = node.frontmatter.title || node.fields.slug
                 return (
-                  <BlogEntry slug={node.fields.slug} title={title} date={node.frontmatter.date} description={node.frontmatter.description} excerpt={node.excerpt} />
+                  <BlogEntry key={node.fields.slug} slug={node.fields.slug} title={title} date={node.frontmatter.date} description={node.frontmatter.description} excerpt={node.excerpt} />
                 )
               })}
             </Grid>
@@ -65,4 +65,4 @@ function HomeHero(props) {
 }
 
 
-export default withStyles(styles)(HomeHero);
+export default withStyles(styles)(SearchBase);

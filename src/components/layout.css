@@ -6,3 +6,7 @@ h1 {
   text-rendering: optimizeLegibility;
   font-weight: 700;
 }
+
+h3 {
+  margin-top: 0;
+}

@@ -5,7 +5,7 @@ import Grid from "@material-ui/core/Grid"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import HomeContainer from "../components/homeContainer"
-import About from "../components/about"
+import Title from "../components/title"
 
 const styles = theme => ({
   aboutHeading: {
@@ -27,7 +27,7 @@ function IndexPage(props) {
       <SEO title="Home" />
       <Grid container spacing={3}>
         <Grid item className={classes.aboutHeading} xs={12}>
-          <About />
+          <Title />
         </Grid>
         <Grid container className={classes.homeHeading} spacing={1} >
           <HomeContainer />

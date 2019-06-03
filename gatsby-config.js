@@ -3,6 +3,12 @@ module.exports = {
     title: `The Junior Dev`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `Oliver Nural`,
+    about: ``,
+    social: {
+      twitter: `OliverNural`,
+      github: `OllyNural`,
+      linkedin: `olivernural`
+    }
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

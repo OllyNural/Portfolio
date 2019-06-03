@@ -1,8 +1,20 @@
 import React from "react";
-import { StaticQuery, graphql, Link } from "gatsby";
+import { StaticQuery, graphql } from "gatsby";
 import { withStyles } from "@material-ui/styles";
 
+import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io';
+import { Grid } from "@material-ui/core";
+
 const styles = theme => ({
+  aboutText: {
+    fontSize: `0.8em`,
+  },
+  aboutContainer: {
+    padding: `12px`,
+  },
+  aboutTitle: {
+    display: `inline`,
+  }
 })
 
 function About(props) {
@@ -10,24 +22,31 @@ function About(props) {
   return (
     <StaticQuery
       query={graphql`
-        query AboutTitleQuery {
+        query AboutSiteMetadata {
           site {
             siteMetadata {
-                title
+              about
+              social {
+                twitter
+              }
             }
           }
         }
       `}
       render={(data) => {
         return (
-          <React.Fragment>
-            <h1><Link style={{color: `rgba(0, 0, 0, 0.87)`}} to="/">THE JUNIOR DEV</Link></h1>
-            <span className={classes.subHeading}> A blog following the life of a junior developer.<br /> Demystifying software delivery for other junior developers. </span>
-          </React.Fragment>
+          <Grid className={classes.aboutContainer} item xs={12}>
+            <h3 className={classes.aboutTitle} >Hello!</h3><span role="img" aria-labelledby="Wave Emoji" aria-label="Wave emoji">👋</span>
+            <p className={classes.aboutText}>My name is Oliver - a software engineer based in London, UK.</p>
+            <p className={classes.aboutText}>I have passions for <i>Javascript</i>, <i>DevOps</i> and teaching other developers as much as I can along the way.</p>
+            <p className={classes.aboutText}> This blog is aimed at recording my progress as a junior developer, and providing insight and thoughts for future junior developers.</p>
+            <IoLogoGithub />
+            <IoLogoLinkedin />
+          </Grid>
         )
       }}
     />
   )
 }
 
-export default withStyles(styles)(About);
+export default withStyles(styles)(About)

@@ -4,6 +4,7 @@ import { withStyles } from "@material-ui/styles";
 import { Paper, Grid } from "@material-ui/core";
 
 import Image from "./image"
+import About from "./about"
 import BlogEntry from "./blogEntry"
 
 const styles = theme => ({
@@ -40,12 +41,12 @@ function HomeBase(props) {
           <React.Fragment>
             <Grid item xs={12} sm={4}>
               <Paper>
-                <Grid container>
-                  <Grid item xs={6} sm={12}>
+                <Grid container direction="row">
+                  <Grid item xs={4} sm={12}>
                     <Image />
                   </Grid>
-                  <Grid item xs={6} sm={12}>
-                    About me
+                  <Grid container item xs={8} sm={12}>
+                    <About />
                   </Grid>
                 </Grid>
 

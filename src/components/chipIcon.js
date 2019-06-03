@@ -1,23 +1,31 @@
 import React from "react";
-import { withStyles, ThemeProvider } from "@material-ui/styles";
-import { createMuiTheme } from '@material-ui/core/styles'
+import { withStyles } from "@material-ui/styles";
+// import { createMuiTheme } from '@material-ui/core/styles'
 import { Chip, Avatar } from "@material-ui/core";
 import Check from "@material-ui/icons/Check"
 
 const styles = theme => ({
+  chip: {
+  },
+  iconShow: {
+    // opacity: 1
+  },
+  iconHide: {
+    // opacity: 0
+  }
 })
 
 function GridIcon(props) {
   const { classes } = props;
 
-  let theme = createMuiTheme({
-    palette: {
-      primary: {
-        main: props.color
-      },
-    }
-  });
-
+  // let theme = createMuiTheme({
+  //   palette: {
+  //     primary: {
+  //       main: props.color
+  //     },
+  //   }
+  // });
+  
   const [iconState, setIconState] = React.useState({
     selected: false,
     variant: !props.selected ? props.variant : 'default',
@@ -31,12 +39,15 @@ function GridIcon(props) {
     })
   }
 
-  const avatar = () => (
-    <Avatar><Check /></Avatar>
-  )
+  const avatar = () => {
+
+    console.log(iconState.selected)
+    return (
+    <Avatar className={iconState.selected ? classes.iconShow : classes.iconHide}><Check /></Avatar>
+  )}
 
   return (
-    <ThemeProvider theme={theme}>
+    // <ThemeProvider >
       <Chip
         key={props.key}
         avatar={iconState.selected ? avatar() : null}
@@ -44,9 +55,10 @@ function GridIcon(props) {
         onClick={handleClick}
         className={classes.chip}
         variant={iconState.variant}
-        color={"primary"}
+        color={iconState.selected ? "primary" : "default"}
+        // onDelete={handleDelete}
       />
-    </ThemeProvider>
+    // </ThemeProvider>
   )
 }
 

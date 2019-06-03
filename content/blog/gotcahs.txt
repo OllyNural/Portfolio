@@ -5,3 +5,7 @@ Colours get duplicated when programatically creating the tag chips for searching
 
 
 “Done is better than perfect.” — Sheryl Sandberg
+
+
+
+Why you should care about the software delivery lifecycle
