@@ -37,8 +37,8 @@ module.exports = {
         background_color: `#004E89`,
         theme_color: `#004E89`,
         display: `minimal-ui`,
-        icon: `src/images/TheJuniorDev.png`, // This path is relative to the root of the site.
-        // icon: `src/images/tjd.png`, // This path is relative to the root of the site.
+        icon: `src/images/dev_circle.png`, // This path is relative to the root of the site.
+        // icon: `src/images/TheJuniorDev.png`, // This path is relative to the root of the site.
       },
     },
     {
