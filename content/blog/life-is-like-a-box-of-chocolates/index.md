@@ -1,7 +1,7 @@
 ---
 title: Life is like a box of chocolates. 
 date: "2015-11-01T22:12:03.284Z"
-exercpt: Hello World Blog Post! This blog focuses on a really long description. This is because I want to test the length of descriptions, and how the css works.
+excerpt: Hello World Blog Post! This blog focuses on a really long description. This is because I want to test the length of descriptions, and how the css works.
 tags: ["TDD"]
 ---
 

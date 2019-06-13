@@ -30,7 +30,7 @@ function BlogEntry(props) {
       <h3 className={classes.blogTitle} ><Link style={{color: `rgba(0, 0, 0, 0.87)`}} to={props.slug}>{props.title}</Link></h3>
       <span className={classes.blogDate}>{props.date}</span>
       <p className={classes.blogDescription} dangerouslySetInnerHTML={{
-          __html: props.description || props.excerpt,
+          __html: props.excerpt,
         }}
       />
     </Grid>

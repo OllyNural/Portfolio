@@ -1,7 +1,7 @@
 ---
 title: Hello World 1
 date: "2015-06-01T22:12:03.284Z"
-exercpt: Hello World Blog Post!
+excerpt: Hello World Blog Post!
 tags: ["DevOps", "Automation", "TDD"]
 ---
 

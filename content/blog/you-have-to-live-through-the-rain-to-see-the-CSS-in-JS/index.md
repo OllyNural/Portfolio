@@ -1,7 +1,7 @@
 ---
 title: You have to live through the rain to see the CSS-in-JS
 date: "2015-10-01T22:12:03.284Z"
-exercpt: Hello World Blog Post! This also has a really long description because I want to be able to test my css abilities. If you've read it this far, too bad!
+excerpt: Hello World Blog Post! This also has a really long description because I want to be able to test my css abilities. If you've read it this far, too bad!
 tags: ["TDD"]
 ---
 

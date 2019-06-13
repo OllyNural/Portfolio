@@ -1,7 +1,7 @@
 ---
 title: Shoot for the moon. Even if you miss, you'll land up among the stars.
 date: "2015-09-01T22:12:03.284Z"
-exercpt: Yet another blog post test page. I still need to see what it looks like when I have a long description on the page, so here's another crappy quote. 
+excerpt: Yet another blog post test page. I still need to see what it looks like when I have a long description on the page, so here's another crappy quote. 
 tags: ["TDD"]
 ---
 
