@@ -11,7 +11,7 @@ const styles = theme => ({
   aboutHeading: {
     marginTop: '50px',
     marginBottom: '20px',
-    textAlign: 'center'
+    // textAlign: 'center'
   },
   homeHeading: {
     marginTop: 0,
@@ -26,7 +26,7 @@ function IndexPage(props) {
     <Layout>
       <SEO title="Home" />
       <Grid container spacing={3}>
-        <Grid item className={classes.aboutHeading} xs={12}>
+        <Grid container item className={classes.aboutHeading} xs={12}>
           <Title />
         </Grid>
         <Grid container className={classes.homeHeading} spacing={1} >

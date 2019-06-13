@@ -17,14 +17,6 @@ const styles = theme => ({
 
 function GridIcon(props) {
   const { classes } = props;
-
-  // let theme = createMuiTheme({
-  //   palette: {
-  //     primary: {
-  //       main: props.color
-  //     },
-  //   }
-  // });
   
   const [iconState, setIconState] = React.useState({
     selected: false,
@@ -40,8 +32,6 @@ function GridIcon(props) {
   }
 
   const avatar = () => {
-
-    console.log(iconState.selected)
     return (
     <Avatar className={iconState.selected ? classes.iconShow : classes.iconHide}><Check /></Avatar>
   )}
@@ -56,7 +46,6 @@ function GridIcon(props) {
         className={classes.chip}
         variant={iconState.variant}
         color={iconState.selected ? "primary" : "default"}
-        // onDelete={handleDelete}
       />
     // </ThemeProvider>
   )

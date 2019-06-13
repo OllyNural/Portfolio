@@ -12,7 +12,6 @@ const styles = theme => ({
     transition: `opacity 225ms ease-in-out`,
     opacity: 0,
   },
-  entering: { opacity: 0, display: 'none' },
   entered:  { opacity: 1 , display: 'flex'},
   exited:   { opacity: 0, display: 'none'},
 })

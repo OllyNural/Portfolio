@@ -53,7 +53,7 @@ function SearchBase(props) {
               {posts.filter(({ node }) => props.tagData.some(tag => node.frontmatter.tags.includes(tag))).map(({ node }) => {
                 const title = node.frontmatter.title || node.fields.slug
                 return (
-                  <BlogEntry key={node.fields.slug} slug={node.fields.slug} title={title} date={node.frontmatter.date} excerpt={node.frontmatter.excerpt} />
+                  <BlogEntry key={node.fields.slug} slug={node.fields.slug} title={title} date={node.frontmatter.date} excerpt={node.frontmatter.excerpt} tags={node.frontmatter.tags}/>
                 )
               })}
             </Grid>

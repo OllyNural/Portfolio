@@ -1,7 +1,6 @@
 import React from "react";
 import { withStyles } from "@material-ui/styles";
-import SearchIcon from "@material-ui/icons/Search"
-import { Paper, InputBase, Grid, IconButton } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 
 import ChipIcon from "./chipIcon.js";
 
@@ -14,8 +13,6 @@ const styles = theme => ({
     display: 'flex',
     alignItems: 'center',
     width: '100%',
-    // borderTopRightRadius: '25px',
-    // borderBottomRightRadius: '25px',
   },
   input: {
     marginLeft: 8,
@@ -35,7 +32,7 @@ const styles = theme => ({
   },
   gridIconsText: {
     textAlign: 'center',
-    marginBottom: '10px',
+    // marginBottom: '10px',
   },
   gridIconsContainer: {
     display: 'flex',
@@ -58,33 +55,15 @@ function SearchInput(props) {
     {key: '4', label: 'Musings', color: '#3D315B', variant: 'default'},
   ])
 
-  function onInputChange(e) {
-    if (e.keyCode === 13) submitTextInput(e.target.value)
-  }
-
-  function submitTextInput(text) {
-    props.onSubmitText(text)
-  }
-
   const handleClick = data => () => {
     props.onTagUpdate(data)
   }
 
   return (
     <React.Fragment>
-      <Grid item container className={classes.gridSearch} xs={12} >
-        <Grid item xs={12} sm={6}>
-          <Paper className={classes.paper} >
-            <InputBase onKeyDown={onInputChange} onChange={onInputChange} autoFocus className={classes.input} placeholder="Search all articles by keywords" />
-            <IconButton className={classes.iconButton} aria-label="Search">
-              <SearchIcon />
-            </IconButton>
-          </Paper>
-        </Grid>
-      </Grid>
       <Grid container item className={classes.gridIcons} xs={12}>
         <Grid item xs={12} className={classes.gridIconsText} >
-          Or filter by tag
+          <h3>Filter by tag</h3>
         </Grid>
         <Grid container className={classes.gridIconsContainer} spacing={2} >
           {gridIconsState.map(data => {
