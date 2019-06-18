@@ -1,5 +1,6 @@
 import React from "react";
 import { withStyles } from "@material-ui/styles";
+import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
 import { Grid } from "@material-ui/core";
 
 import ChipIcon from "./chipIcon.js";
@@ -44,15 +45,38 @@ const styles = theme => ({
   },
 });
 
+const themeTemplate = color => ({
+  palette: {
+    primary: {
+      light: color,
+      main: color,
+      dark: color,
+      contrastText: '#fff',
+    },
+    default: {
+      light: color,
+      main: color,
+      dark: color,
+      contrastText: '#fff',
+    },
+    secondary: {
+      light: color,
+      main: color,
+      dark: color,
+      contrastText: '#000',
+    },
+  },
+})
+
 function SearchInput(props) {
   const { classes } = props;
 
   const [gridIconsState] = React.useState([
-    {key: '0', label: 'DevOps', color: '#231123', variant: 'default'},
-    {key: '1', label: 'TDD', color: '#AF1B3F', variant: 'default'},
-    {key: '2', label: 'Automation', color: '#558C8C', variant: 'default'},
-    {key: '3', label: 'Pairing', color: '#004BA8', variant: 'default'},
-    {key: '4', label: 'Musings', color: '#3D315B', variant: 'default'},
+    {key: '0', label: 'DevOps', color: '#231123'},
+    {key: '1', label: 'TDD', color: '#AF1B3F'},
+    {key: '2', label: 'Automation', color: '#558C8C'},
+    {key: '3', label: 'Pairing', color: '#004BA8'},
+    {key: '4', label: 'Musings', color: '#3D315B'},
   ])
 
   const handleClick = data => () => {
@@ -67,15 +91,16 @@ function SearchInput(props) {
         </Grid>
         <Grid container className={classes.gridIconsContainer} spacing={2} >
           {gridIconsState.map(data => {
+            console.log(createMuiTheme(themeTemplate(data.color)))
             return (
               <Grid key={data.key} item>
-                <ChipIcon 
-                  key={data.key}
-                  label={data.label}
-                  onClick={handleClick(data.label)}
-                  variant={data.variant}
-                  color={data.color}
-                />
+                <MuiThemeProvider theme={createMuiTheme(themeTemplate(data.color))}>
+                  <ChipIcon 
+                    label={data.label}
+                    onClick={handleClick(data.label)}
+                    color={data.color}
+                  />
+                </MuiThemeProvider>
               </Grid>
             )
           })}

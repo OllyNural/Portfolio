@@ -18,9 +18,6 @@ function Title(props) {
           site {
             siteMetadata {
                 about
-                social {
-                  twitter
-                }
             }
           }
         }

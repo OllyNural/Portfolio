@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby"
 import { withStyles } from "@material-ui/styles";
-import { Grid, Chip, Avatar } from "@material-ui/core";
+import { Grid, Chip } from "@material-ui/core";
 
 const styles = theme => ({
   blogEntry: {
@@ -31,10 +31,9 @@ function BlogEntry(props) {
       <span className={classes.blogDate}>{props.date}</span>
       <Grid container className={classes.gridIconsContainer} spacing={2} >
           {props.tags.map(data => {
-            console.log(data)
             return (
-              <Grid key={data.key} item>
-                <Chip label={data} variant={`default`} />
+              <Grid key={data} item>
+                <Chip key={data} label={data} variant={`default`} />
               </Grid>
             )
           })}
