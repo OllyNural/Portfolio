@@ -1,5 +1,6 @@
 import React from "react";
 import { withStyles } from "@material-ui/styles";
+import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
 import { Grid } from "@material-ui/core";
 // import FilterList from "@material-ui/icons/FilterList"
 
@@ -41,6 +42,29 @@ const styles = theme => ({
   },
 });
 
+const themeTemplate = color => ({
+  palette: {
+    primary: {
+      light: color,
+      main: color,
+      dark: color,
+      contrastText: '#fff',
+    },
+    default: {
+      light: color,
+      main: color,
+      dark: color,
+      contrastText: '#fff',
+    },
+    secondary: {
+      light: color,
+      main: color,
+      dark: color,
+      contrastText: '#000',
+    },
+  },
+})
+
 function SearchInput(props) {
   const { classes } = props;
 
@@ -63,14 +87,17 @@ function SearchInput(props) {
           <h4 style={{'marginTop': 0}}>Filter by tag</h4>
         </Grid>
         <Grid container className={classes.gridIconsContainer} spacing={2} >
+          {/* <Grid item> <FilterList fontSize="default" /> </Grid> */}
           {gridIconsState.map(data => {
             return (
               <Grid key={data.key} item>
-                <ChipIcon 
-                  label={data.label}
-                  onClick={handleClick(data.label)}
-                  color={data.color}
-                />
+                <MuiThemeProvider theme={createMuiTheme(themeTemplate(data.color))}>
+                  <ChipIcon 
+                    label={data.label}
+                    onClick={handleClick(data.label)}
+                    color={data.color}
+                  />
+                </MuiThemeProvider>
               </Grid>
             )
           })}

@@ -23,18 +23,15 @@ function HomeContainer(props) {
 
   const [searchFieldData, setSearchFieldData] = React.useState(null)
 
-  // If search criteria OR array are not empty, then search is true
   function isSearch() {
     return (searchFieldData != null || tagData.length !== 0)
   }
 
   function onSubmitText(text) {
-    console.log(text)
     setSearchFieldData(text)
   }
 
   function onTagUpdate(tag) {
-    console.log(tag)
     let index = tagData.indexOf(tag)
     if (index === -1) {
       setTagData(prevState => [...prevState, tag])
