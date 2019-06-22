@@ -26,7 +26,7 @@ function Title(props) {
         return (
           <React.Fragment>
             <Grid item xs={12}>
-              <h1><Link style={{color: `rgba(0, 0, 0, 0.87)`}} to="/">THE JUNIOR DEV</Link></h1>
+              <h1><Link style={{color: `rgba(0, 0, 0, 0.87)`, textDecorationColor: 'red'}} to="/">THE JUNIOR DEV</Link></h1>
             </Grid>
             <Grid item xs={12} className={classes.heroText} >
               {/* <span className={classes.subHeading}> A blog following the life of a junior developer.</span><br />

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby"
 import { withStyles } from "@material-ui/styles";
-import { Grid, Chip } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 
 const styles = theme => ({
   blogEntry: {
@@ -19,14 +19,8 @@ const styles = theme => ({
     textAlign: 'center',
     marginRight: '50px',
     height: '100%',
+    color: theme.palette.secondary.main,
   },
-  blogDescription: {
-
-  },
-  blogChip: {
-    marginRight: '10px',
-    height: '24px',
-  }
 })
 
 function BlogEntry(props) {
@@ -36,14 +30,9 @@ function BlogEntry(props) {
     <Grid container item sx={12} direction="column" className={classes.blogEntry} >
       <h3 className={classes.blogTitle} ><Link style={{color: `rgba(0, 0, 0, 0.87)`}} to={props.slug}>{props.title}</Link></h3>
       <Grid container alignItems="center" direction={'row'} item>
-        <span className={classes.blogDate}>{props.date}</span>
-        {props.tags.map(data => {
-          return (
-            <Grid key={data} item>
-              <Chip key={data} label={data} variant={`default`} size={'small'} className={classes.blogChip}/>
-            </Grid>
-          )
-        })}
+        <div className={classes.blogSubhead}>
+          <span className={classes.blogDate}>{props.date}</span>
+        </div>
         </Grid>
         <p className={classes.blogDescription} dangerouslySetInnerHTML={{
             __html: props.excerpt,

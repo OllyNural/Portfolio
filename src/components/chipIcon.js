@@ -13,13 +13,26 @@ const styles = theme => ({
   chipTransform: {
     '& span': {
       transform: 'translateX(0px)',
+    },
+    '&:hover > div': {
+      backgroundColor: 'rgb(66, 105, 131)',
+    },
+    '&:visited > div': {
+      backgroundColor: 'rgb(66, 105, 131)',
+    },
+    '&:active > div': {
+      backgroundColor: 'rgb(66, 105, 131)',
+    },
+    '&:focus > div': {
+      backgroundColor: 'rgb(66, 105, 131)',
     }
   },
   avatar: {
     transform: 'translateX(5px)',
     width: '20px',
     height: '20px',
-    transition: `opacity 225ms ease-in-out, color 225ms ease-in-out`,
+    // transition: `opacity 100ms ease-in-out, color 225ms ease-in-out `,
+    transition: 'background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, opacity 50ms ease-in 0ms',
     // '&:hover, &:focus': {
     //   backgroundColor: 'rgb(66, 105, 131)',
     // },
@@ -28,9 +41,11 @@ const styles = theme => ({
     // },
   },
   avatarShow: {
+    // backgroundColor: theme.palette.primary.main,
     opacity: 1,
   },
   avatarHide: {
+    // backgroundColor: 'transparent',
     opacity: 0,
   }
 })

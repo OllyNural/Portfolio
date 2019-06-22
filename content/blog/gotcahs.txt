@@ -9,3 +9,5 @@ Colours get duplicated when programatically creating the tag chips for searching
 
 
 Why you should care about the software delivery lifecycle
+
+How to ask for help
