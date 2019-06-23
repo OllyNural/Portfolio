@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "gatsby"
 import { withStyles } from "@material-ui/styles";
 import { Grid } from "@material-ui/core";
+import Divider from '@material-ui/core/Divider';
 
 const styles = theme => ({
   blogEntry: {
@@ -14,11 +15,13 @@ const styles = theme => ({
     marginTop: 0,
     marginBottom: 0,
   },
-  blogDate: {
+  blogSubDate: {
     fontSize: '0.8em',
     textAlign: 'center',
     marginRight: '50px',
-    height: '100%',
+    marginBottom: '10px',
+  },
+  blogDate: {
     color: theme.palette.secondary.main,
   },
 })
@@ -29,10 +32,9 @@ function BlogEntry(props) {
   return (
     <Grid container item sx={12} direction="column" className={classes.blogEntry} >
       <h3 className={classes.blogTitle} ><Link style={{color: `rgba(0, 0, 0, 0.87)`}} to={props.slug}>{props.title}</Link></h3>
-      <Grid container alignItems="center" direction={'row'} item>
-        <div className={classes.blogSubhead}>
-          <span className={classes.blogDate}>{props.date}</span>
-        </div>
+      <Grid container direction={'row'} item>
+        <span className={classes.blogSubDate}><i>Published on <span className={classes.blogDate}>{props.date}</span></i></span>
+        <Divider variant="middle" />
         </Grid>
         <p className={classes.blogDescription} dangerouslySetInnerHTML={{
             __html: props.excerpt,
