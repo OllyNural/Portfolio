@@ -38,7 +38,7 @@ function About(props) {
           <Grid className={classes.aboutContainer} item xs={12}>
             <h3 className={classes.aboutTitle} >Hello!</h3><span role="img" aria-labelledby="Wave Emoji" aria-label="Wave emoji">👋</span>
             <p className={classes.aboutText}>My name is Oliver - a software engineer based in London, UK.</p>
-            <p className={classes.aboutText}>I have passions for <i>Javascript</i>, <i>DevOps</i> and teaching other developers as much as I can along the way.</p>
+            <p className={classes.aboutText}>My passions include <i>Javascript</i>, <i>DevOps</i> and teaching other developers as much as I can along the way.</p>
             <p className={classes.aboutText}> This blog is aimed at recording my progress as a junior developer, and providing insight and thoughts for future junior developers.</p>
             <IoLogoGithub />
             <IoLogoLinkedin />
