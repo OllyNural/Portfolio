@@ -21,9 +21,24 @@ const styles = theme => ({
     marginRight: '50px',
     marginBottom: '10px',
   },
+  blogDescription: {
+    marginBottom: '10px',
+  },
   blogDate: {
     color: theme.palette.secondary.main,
   },
+  tagsList: {
+    margin:'0',
+    padding:'0',
+    listStyle:'none',
+    display: 'flex',
+  },
+  tag: {
+    fontSize: '0.8em',
+    color: theme.palette.secondary.main,
+    fontWeight: 'bold',
+    marginRight: '10px'
+  }
 })
 
 function BlogEntry(props) {
@@ -40,6 +55,13 @@ function BlogEntry(props) {
             __html: props.excerpt,
           }}
         />
+        <ul className={classes.tagsList}>
+        {props.tags.map((tag) => {
+          return (
+            <li className={classes.tag}>#{tag}</li>
+          )
+        })}
+        </ul>
     </Grid>
   )
 }

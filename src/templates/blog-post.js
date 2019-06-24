@@ -1,68 +1,69 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import { withStyles } from "@material-ui/styles";
 
 // import Bio from "../components/bio"
 import LayoutBlog from "../components/layout-blog"
 import SEO from "../components/seo"
-// import { rhythm, scale } from "../utils/typography"
+import BlogHeader from './blogHeader'
+import BlogDate from './blogDate'
 
-class BlogPostTemplate extends React.Component {
-  render() {
-    const post = this.props.data.markdownRemark
-    const siteTitle = this.props.data.site.siteMetadata.title
-    const { previous, next } = this.props.pageContext
+const styles = theme => ({
 
-    return (
-      <LayoutBlog location={this.props.location} title={siteTitle}>
-        <SEO
-          title={post.frontmatter.title}
-          description={post.excerpt}
-        />
-        <h2>{post.frontmatter.title}</h2>
-        <p
-          style={{
-            display: `block`,
-          }}
-        >
-          {post.frontmatter.date}
-        </p>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr/>
-        {/* <Bio /> */}
+})
 
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
-        >
-          <li>
-            {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
-            )}
-          </li>
-          <li>
-            {next && (
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
-              </Link>
-            )}
-          </li>
-        </ul>
-      </LayoutBlog>
-    )
-  }
+// class BlogPostTemplate extends React.Component {
+function BlogPostTemplate(props) {
+  const post = props.data.markdownRemark
+  const siteTitle = props.data.site.siteMetadata.title
+  const { previous, next } = props.pageContext
+  // const { classes } = props
+
+  return (      
+    <LayoutBlog location={props.location} title={siteTitle}>
+      <SEO
+        title={post.frontmatter.title}
+        description={post.excerpt}
+      />
+      <BlogHeader title={post.frontmatter.title}/>
+      <BlogDate date={post.frontmatter.date}/>
+      <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      <hr/>
+      {/* <Bio /> */}
+
+      <ul
+        style={{
+          display: `flex`,
+          flexWrap: `wrap`,
+          justifyContent: `space-between`,
+          listStyle: `none`,
+          padding: 0,
+        }}
+      >
+        <li>
+          {previous && (
+            <Link to={previous.fields.slug} rel="prev">
+              ← {previous.frontmatter.title}
+            </Link>
+          )}
+        </li>
+        <li>
+          {next && (
+            <Link to={next.fields.slug} rel="next">
+              {next.frontmatter.title} →
+            </Link>
+          )}
+        </li>
+      </ul>
+    </LayoutBlog>
+  )
 }
 
-export default BlogPostTemplate
+export default withStyles(styles)(BlogPostTemplate)
+// export default BlogPostTemplate
 
 export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!) {
+  query BlogPostBySlugOld($slug: String!) {
     site {
       siteMetadata {
         title
