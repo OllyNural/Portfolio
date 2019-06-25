@@ -11,3 +11,13 @@ Colours get duplicated when programatically creating the tag chips for searching
 Why you should care about the software delivery lifecycle
 
 How to ask for help
+
+Be like water, Be like glue. 
+
+Being a good developer doesn't mean just coding. More importantly, not coding for a few days or even a sprint doesn't make you a bad developer.
+(If the time calls for it).
+
+Be fluid like water. Support the team like glue. 
+
+DevOps doesn't mean Jack-of-all-Trades developer. Or does it?
+ - When I first started getting into this DevOps thing I was complaining I was just a Jack of all trades developer

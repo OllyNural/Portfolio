@@ -56,11 +56,11 @@ function BlogEntry(props) {
           }}
         />
         <ul className={classes.tagsList}>
-        {props.tags.map((tag) => {
-          return (
-            <li className={classes.tag}>#{tag}</li>
-          )
-        })}
+          {props.tags.map((tag) => {
+            return (
+              <li className={classes.tag}>#{tag}</li>
+            )
+          })}
         </ul>
     </Grid>
   )

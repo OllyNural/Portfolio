@@ -26,7 +26,7 @@ function BlogPostTemplate(props) {
         description={post.excerpt}
       />
       <BlogHeader title={post.frontmatter.title}/>
-      <BlogDate date={post.frontmatter.date}/>
+      <BlogDate date={post.frontmatter.date} tags={post.frontmatter.tags}/>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
       <hr/>
       {/* <Bio /> */}
@@ -78,6 +78,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         excerpt
+        tags
       }
     }
   }
