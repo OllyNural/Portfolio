@@ -18,7 +18,6 @@ const styles = theme => ({
             position: 'absolute',
             bottom: '-10px',
             left: '0',
-            color: theme.palette.secondary.main,
             backgroundColor: theme.palette.secondary.main,
             marginTop: '5px',
         },
