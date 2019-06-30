@@ -1,10 +1,10 @@
 import React from "react";
 import { StaticQuery, graphql } from "gatsby"
 import { withStyles } from "@material-ui/styles";
-import { Paper, Grid } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 
-import Image from "./image"
 import About from "./about"
+import AboutSocial from "./about-social"
 import BlogEntry from "./blogEntry"
 
 const styles = theme => ({
@@ -49,16 +49,8 @@ function HomeBase(props) {
               })}
             </Grid>
             <Grid item xs={12} sm={4}>
-              <Paper>
-                <Grid container direction="row">
-                  <Grid item xs={4} sm={12}>
-                    <Image />
-                  </Grid>
-                  <Grid container item xs={8} sm={12}>
-                    <About />
-                  </Grid>
-                </Grid>
-              </Paper>
+              <About />
+              <AboutSocial />
             </Grid>
           </React.Fragment>
         )

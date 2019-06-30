@@ -17,7 +17,6 @@ function BlogPostTemplate(props) {
   const post = props.data.markdownRemark
   const siteTitle = props.data.site.siteMetadata.title
   const { previous, next } = props.pageContext
-  // const { classes } = props
 
   return (      
     <LayoutBlog location={props.location} title={siteTitle}>

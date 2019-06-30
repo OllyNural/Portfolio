@@ -32,7 +32,6 @@ const styles = theme => ({
     width: '20px',
     height: '20px',
     transition: 'background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, opacity 50ms ease-in 0ms',
-
   },
   avatarShow: {
     opacity: 1,

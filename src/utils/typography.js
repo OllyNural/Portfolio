@@ -1,6 +1,15 @@
 import Typography from 'typography'
 import lincolnTheme from 'typography-theme-lincoln'
- 
+
+lincolnTheme.overrideThemeStyles = ({ rhythm }, options) => ({
+  'img': {
+    marginBottom: '0px',
+  },
+  // 'p': {
+  //   lineHeight: '26px',
+  // }
+})
+
 const typography = new Typography(lincolnTheme)
 
 // Hot reload typography in development.

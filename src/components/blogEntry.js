@@ -7,7 +7,6 @@ import Divider from '@material-ui/core/Divider';
 const styles = theme => ({
   blogEntry: {
     textAlign: 'left',
-    paddingLeft: '30px',
     paddingRight: '30px',
     marginBottom: '30px'
   },
@@ -58,7 +57,7 @@ function BlogEntry(props) {
         <ul className={classes.tagsList}>
           {props.tags.map((tag) => {
             return (
-              <li className={classes.tag}>#{tag}</li>
+              <li key={classes.tag} className={classes.tag}>#{tag}</li>
             )
           })}
         </ul>

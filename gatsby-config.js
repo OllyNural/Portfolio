@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: `The Junior Dev`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    description: `A blog following the life of a Junior Developer, describing learnings and thoughts along the way.`,
     author: `Oliver Nural`,
-    about: ``,
+    about: `A software developer engineer based in London, UK.`,
     social: {
       twitter: `OliverNural`,
       github: `OllyNural`,

@@ -2,47 +2,84 @@ import React from "react";
 import { StaticQuery, graphql } from "gatsby";
 import { withStyles } from "@material-ui/styles";
 
-import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io';
-import { Grid } from "@material-ui/core";
+import { Grid, Paper } from "@material-ui/core";
+import Image from "./Image"
 
 const styles = theme => ({
-  aboutText: {
-    fontSize: `0.8em`,
-  },
   aboutContainer: {
-    padding: `12px`,
+    marginBottom: '35px',
+  },
+  aboutTextContainer: {
+    fontSize: `0.8em`,
+    padding: `15px`,
   },
   aboutTitle: {
-    display: `inline`,
+    textAlign: 'center',
+    marginTop: '0px',
+    marginBottom: '20px',
+  },
+  aboutTitleSpan: {
+    width: '100%',
+    position: 'relative', 
+    '&:after': {
+      display: 'block',
+      content: '""',
+      width: '100%',
+      height: '2px',
+      background: 'black',
+      position: 'absolute',
+      bottom: '-10px',
+      left: '0',
+      backgroundColor: theme.palette.secondary.main,
+      marginTop: '5px',
+    },
+  },
+  aboutImage: {
+    padding: '15px 15px 15px 15px',
+    marginBottom: '0px',
+    margin: '0 auto',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  aboutText: {
+    marginTop: '10px',
+    marginBottom: '0px',
+    paddingLeft: '10px',
+    paddingRight: '10px',
+    textAlign: 'center',
+    lineHeight: '24px',
   }
 })
 
 function About(props) {
   const { classes } = props
+
   return (
     <StaticQuery
       query={graphql`
-        query AboutSiteMetadata {
+        query AboutSiteInformation {
           site {
             siteMetadata {
-              about
-              social {
-                twitter
-              }
+              about,
+              author
             }
           }
         }
       `}
       render={(data) => {
         return (
-          <Grid className={classes.aboutContainer} item xs={12}>
-            <h3 className={classes.aboutTitle} >Hello!</h3><span role="img" aria-labelledby="Wave Emoji" aria-label="Wave emoji">👋</span>
-            <p className={classes.aboutText}>My name is Oliver - a software engineer based in London, UK.</p>
-            <p className={classes.aboutText}>My passions include <i>Javascript</i>, <i>DevOps</i> and teaching other developers as much as I can along the way.</p>
-            <p className={classes.aboutText}> This blog is aimed at recording my progress as a junior developer, and providing insight and thoughts for future junior developers.</p>
-            <IoLogoGithub />
-            <IoLogoLinkedin />
-          </Grid>
+          <Paper className={classes.aboutContainer}>
+            <Grid container direction="row">
+              <Grid className={classes.aboutImage} item xs={5} sm={12}>
+                <Image />
+              </Grid>
+              <Grid className={classes.aboutTextContainer} item xs={7} sm={12}>
+                <h3 className={classes.aboutTitle} ><span className={classes.aboutTitleSpan}>{data.site.siteMetadata.author}</span></h3>
+                <p className={classes.aboutText}>{data.site.siteMetadata.about}</p>
+              </Grid>
+            </Grid>
+          </Paper>
         )
       }}
     />

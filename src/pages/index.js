@@ -11,9 +11,17 @@ const styles = theme => ({
   aboutHeading: {
     marginTop: '50px',
     marginBottom: '20px',
+    '&::selection': {
+      background: theme.palette.primary.main
+    }
   },
   homeHeading: {
     marginTop: 0,
+    paddingLeft: '30px',
+    paddingRight: '30px',
+    '&:selection': {
+      background: theme.palette.primary.main
+    }
   }
 })
 
