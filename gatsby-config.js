@@ -3,7 +3,7 @@ module.exports = {
     title: `The Junior Dev`,
     description: `A blog following the life of a Junior Developer, describing learnings and thoughts along the way.`,
     author: `Oliver Nural`,
-    about: `A software developer engineer based in London, UK.`,
+    about: `A software engineer based in London, UK.`,
     social: {
       twitter: `OliverNural`,
       github: `OllyNural`,
@@ -88,6 +88,13 @@ module.exports = {
         // stylesProvider: {
         //   injectFirst: true,
         // },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-143152759-1",
+        cookieDomain: "thejunior.dev",
       },
     },
   ],

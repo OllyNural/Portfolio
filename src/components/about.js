@@ -49,6 +49,11 @@ const styles = theme => ({
     paddingRight: '10px',
     textAlign: 'center',
     lineHeight: '24px',
+  },
+  passions: {
+    color: theme.palette.secondary.main,
+    fontStyle: 'italic',
+    fontWeight: 'bold',
   }
 })
 
@@ -77,6 +82,7 @@ function About(props) {
               <Grid className={classes.aboutTextContainer} item xs={7} sm={12}>
                 <h3 className={classes.aboutTitle} ><span className={classes.aboutTitleSpan}>{data.site.siteMetadata.author}</span></h3>
                 <p className={classes.aboutText}>{data.site.siteMetadata.about}</p>
+                <p className={classes.aboutText}>My passions include <span className={classes.passions}>DevOps</span>, <span className={classes.passions}>Javascript</span> and <span className={classes.passions}>teaching developers</span>.</p>
               </Grid>
             </Grid>
           </Paper>
