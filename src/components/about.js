@@ -3,7 +3,7 @@ import { StaticQuery, graphql } from "gatsby";
 import { withStyles } from "@material-ui/styles";
 
 import { Grid, Paper } from "@material-ui/core";
-import Image from "./Image"
+import Image from "./image"
 
 const styles = theme => ({
   aboutContainer: {
