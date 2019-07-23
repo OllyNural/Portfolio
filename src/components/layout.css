@@ -10,3 +10,9 @@ h1 {
 html {
   background-color: #fdfdfd;
 }
+
+/* Blog post CSS - Global due to templating */
+.blogpost-highlighted {
+  color: #F26627;
+  font-weight: 700;
+}

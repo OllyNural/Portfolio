@@ -49,7 +49,7 @@ function SearchInput(props) {
     {key: '1', label: 'TDD', color: '#AF1B3F'},
     {key: '2', label: 'Automation', color: '#558C8C'},
     {key: '3', label: 'Pairing', color: '#004BA8'},
-    {key: '4', label: 'Musings', color: '#3D315B'},
+    {key: '5', label: 'Workplace', color: '#3D315B'},
   ])
 
   const handleClick = data => () => {

@@ -4,6 +4,10 @@ Colours get duplicated when programatically creating the tag chips for searching
 - all use the last colour defined, scoping error?
 
 
+
+
+-1) Blind Confidence 
+
 0) “Done is better than perfect.” — Sheryl Sandberg
  - But what does it mean for you?
 
@@ -20,3 +24,8 @@ Colours get duplicated when programatically creating the tag chips for searching
 
 4) DevOps doesn't mean Jack-of-all-Trades developer. Or does it?
  - When I first started getting into this DevOps thing I was complaining I was just a Jack of all trades developer
+
+
+ Maintain a healthy level of ignorance and abstraction in your learning
+- helps you learn a lot of different things
+

@@ -17,7 +17,7 @@ const styles = theme => ({
         // gridTemplateColumns: 'minmax(20px, 1fr) auto minmax(20px, 1fr)',
         alignItems: 'center',
         textAlign: 'center',
-        gridGap: '30px',
+        gridGap: '40px',
         width: '100%',
         marginBottom: '1em',
         marginTop: '10px',
