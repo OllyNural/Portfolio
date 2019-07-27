@@ -16,3 +16,8 @@ html {
   color: #F26627;
   font-weight: 700;
 }
+
+blockquote {
+  /* border-left: 0.4rem solid #134896; */
+  font-size: 1.1em;
+}
