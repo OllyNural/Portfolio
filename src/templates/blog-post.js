@@ -1,6 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import { withStyles } from "@material-ui/styles";
+import { DiscussionEmbed } from "disqus-react"
 
 // import Bio from "../components/bio"
 import LayoutBlog from "../components/layout-blog"
@@ -17,6 +18,11 @@ function BlogPostTemplate(props) {
   const post = props.data.markdownRemark
   const siteTitle = props.data.site.siteMetadata.title
   const { previous, next } = props.pageContext
+
+  const disqusConfig = {
+    shortname: process.env.GATSBY_DISQUS_NAME,
+    config: { identifier: post.id, title: post.frontmatter.title },
+  }
 
   return (      
     <LayoutBlog location={props.location} title={siteTitle}>
@@ -54,6 +60,7 @@ function BlogPostTemplate(props) {
           )}
         </li>
       </ul>
+      <DiscussionEmbed {...disqusConfig} />
     </LayoutBlog>
   )
 }
