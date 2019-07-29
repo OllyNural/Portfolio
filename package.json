@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@debiki/gatsby-plugin-talkyard": "^0.5.8",
     "@material-ui/core": "^4.1.1",
     "@material-ui/icons": "^4.0.1",
     "@material-ui/styles": "^4.0.1",

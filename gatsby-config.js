@@ -97,5 +97,11 @@ module.exports = {
         cookieDomain: "thejunior.dev",
       },
     },
+    {
+      resolve: '@debiki/gatsby-plugin-talkyard',
+      options: {
+        talkyardServerUrl: 'https://comments-for-thejunior-dev.talkyard.net'
+      }
+    },
   ],
 }
