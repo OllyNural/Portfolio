@@ -1,8 +1,8 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import { withStyles } from "@material-ui/styles";
-// import { DiscussionEmbed } from "disqus-react"
-import TalkyardCommentsIframe from '@debiki/gatsby-plugin-talkyard';
+import { DiscussionEmbed } from "disqus-react"
+// import TalkyardCommentsIframe from '@debiki/gatsby-plugin-talkyard';
 
 // import Bio from "../components/bio"
 import LayoutBlog from "../components/layout-blog"
@@ -61,8 +61,8 @@ function BlogPostTemplate(props) {
           )}
         </li>
       </ul>
-      {/* <DiscussionEmbed {...disqusConfig} /> */}
-      <TalkyardCommentsIframe />
+      <DiscussionEmbed {...disqusConfig} />
+      {/* <TalkyardCommentsIframe /> */}
     </LayoutBlog>
   )
 }
