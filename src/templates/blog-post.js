@@ -8,7 +8,7 @@ import { DiscussionEmbed } from "disqus-react"
 import LayoutBlog from "../components/layout-blog"
 import SEO from "../components/seo"
 import BlogHeader from './blogHeader'
-import BlogDate from './blogDate'
+import BlogMetadata from './blogMetadata'
 
 const styles = theme => ({
 
@@ -32,7 +32,7 @@ function BlogPostTemplate(props) {
         description={post.excerpt}
       />
       <BlogHeader title={post.frontmatter.title}/>
-      <BlogDate date={post.frontmatter.date} tags={post.frontmatter.tags}/>
+      <BlogMetadata html={post.html} date={post.frontmatter.date} tags={post.frontmatter.tags}/>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
       <hr/>
       {/* <Bio /> */}

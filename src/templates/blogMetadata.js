@@ -1,6 +1,7 @@
 import React from 'react'
 import { withStyles } from '@material-ui/styles';
 import { Grid } from '@material-ui/core';
+import ReadingTime from './readingTime'
 
 const styles = theme => ({
   blogSubDate: {
@@ -41,18 +42,18 @@ const styles = theme => ({
   }
 })
 
-function BlogDate(props) {
+function BlogMetadata(props) {
   const { classes } = props
 
   return (
     <React.Fragment>
       <div className={classes.blogSubDate}>
-        <i className={classes.blogDateWhole}>Published on <span className={classes.blogDate}>{props.date}</span></i>
+        <i className={classes.blogDateWhole}>Published on <span className={classes.blogDate}>{props.date}</span> - <ReadingTime content={props.html} /> </i>
       </div>
       <Grid container justify="center" spacing={2}>
         {props.tags.map((tag) => {
           return (
-            <Grid item><span className={classes.tag}>#{tag}</span></Grid>
+            <Grid key={tag} item><span className={classes.tag}>#{tag}</span></Grid>
           )
         })}
       </Grid>
@@ -61,4 +62,4 @@ function BlogDate(props) {
   )
 }
 
-export default withStyles(styles)(BlogDate)
+export default withStyles(styles)(BlogMetadata)
