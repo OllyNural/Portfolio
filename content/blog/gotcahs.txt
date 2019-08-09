@@ -4,14 +4,18 @@ Colours get duplicated when programatically creating the tag chips for searching
 - all use the last colour defined, scoping error?
 
 
+-----------------------------TOPICS-----------------------------
+    {key: '0', label: 'DevOps', color: '#231123'},
+    {key: '1', label: 'TDD', color: '#AF1B3F'},
+    {key: '2', label: 'Automation', color: '#558C8C'},
+    {key: '3', label: 'Pairing', color: '#004BA8'},
+    {key: '5', label: 'Workplace', color: '#3D315B'},
 
 
 -1) Blind Confidence 
 
 0) “Done is better than perfect.” — Sheryl Sandberg
  - But what does it mean for you?
-
-
 
 1) Why you should care about the software delivery lifecycle
 
@@ -24,8 +28,6 @@ Colours get duplicated when programatically creating the tag chips for searching
 
 4) DevOps doesn't mean Jack-of-all-Trades developer. Or does it?
  - When I first started getting into this DevOps thing I was complaining I was just a Jack of all trades developer
-
- Jack of all Trades
 
 Just because you _can_ do something doesn't mean you should do or have to. Don't be pigeonholed.
 

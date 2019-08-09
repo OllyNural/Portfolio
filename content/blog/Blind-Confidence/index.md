@@ -2,7 +2,7 @@
 title: Blind Confidence
 date: "2019-07-11T22:12:03.284Z"
 excerpt: As developers, we often get put in difficult situations tasked with finding answers to challenging, yet understandable questions. But how can we cope when faced with situations where we don't know the problem?
-tags: ["Workplace"]
+tags: ["Career"]
 ---
 As developers, we often get put in difficult situations. Whether its finding solutions to distinct and interesting problems, designing complex architecture and code, or pushing back on extra features - the list is endless. However, these questions do have answers and are approachable. We can ask other team members or push back with the help of managers and scrum masters. But what about difficult situations where we don't even know the problem? 
 

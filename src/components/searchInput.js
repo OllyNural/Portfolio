@@ -4,6 +4,7 @@ import { Grid } from "@material-ui/core";
 // import FilterList from "@material-ui/icons/FilterList"
 
 import ChipIcon from "./chipIcon.js";
+import { StaticQuery, graphql } from "gatsby";
 
 const styles = theme => ({
   gridSearch: {
@@ -44,39 +45,76 @@ const styles = theme => ({
 function SearchInput(props) {
   const { classes } = props;
 
-  const [gridIconsState] = React.useState([
-    {key: '0', label: 'DevOps', color: '#231123'},
-    {key: '1', label: 'TDD', color: '#AF1B3F'},
-    {key: '2', label: 'Automation', color: '#558C8C'},
-    {key: '3', label: 'Pairing', color: '#004BA8'},
-    {key: '5', label: 'Workplace', color: '#3D315B'},
-  ])
-
   const handleClick = data => () => {
     props.onTagUpdate(data)
   }
 
   return (
-    <React.Fragment>
-      <Grid container item className={classes.gridIcons} xs={12}>
-        <Grid item xs={12} className={classes.gridIconsText} >
-          <h4 style={{'marginTop': 0}}>Filter by tag</h4>
-        </Grid>
-        <Grid container className={classes.gridIconsContainer} spacing={2} >
-          {gridIconsState.map(data => {
-            return (
-              <Grid key={data.key} item>
-                <ChipIcon 
-                  label={data.label}
-                  onClick={handleClick(data.label)}
-                  color={data.color}
-                />
-              </Grid>
-            )
-          })}
-        </Grid>
-      </Grid>
-    </React.Fragment>
+    <StaticQuery
+      query={graphql`
+      {
+        allMarkdownRemark(
+          sort: { fields: [frontmatter___date], order: DESC }
+          limit: 1000
+        ) {
+          edges {
+            node {
+              fields {
+                slug
+              }
+              frontmatter {
+                date(formatString: "MMMM DD, YYYY")
+                title
+                excerpt
+                tags
+              }
+            }
+          }
+        }
+      }
+      `}
+      render={(data) => {
+        const posts = data.allMarkdownRemark.edges
+        console.log(posts)
+
+        let filterTags = []
+
+        const doesExistInArray = (tag, array = filterTags) => {
+          return array.findIndex(el => el.tag === tag) !== -1
+        }
+
+        posts.forEach(node => {
+          let tags = node.node.frontmatter.tags
+          tags.forEach(tag => {
+            console.log(doesExistInArray(tag))
+            if (!doesExistInArray(tag)) filterTags.push({label: tag})
+          });
+        });
+        
+        console.log(filterTags)
+
+        return (
+          <Grid container item className={classes.gridIcons} xs={12}>
+            <Grid item xs={12} className={classes.gridIconsText} >
+              <h4 style={{'marginTop': 0}}>Filter by tag</h4>
+            </Grid>
+            <Grid container className={classes.gridIconsContainer} spacing={2} >
+              {filterTags.map((data, i) => {
+                return (
+                  <Grid key={i} item>
+                    <ChipIcon 
+                      label={data.label}
+                      onClick={handleClick(data.label)}
+                      color={data.color}
+                    />
+                  </Grid>
+                )
+              })}
+            </Grid>
+          </Grid>
+        )
+      }}
+    />
   )
 }
 
