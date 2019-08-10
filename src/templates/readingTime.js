@@ -14,7 +14,7 @@ function ReadingTime(props) {
     let length = content.replace(regex, "\n\t").split(" ").length
     let readingTime = Math.ceil(length / READING_SPEED)
     return (
-        <span>{readingTime} min read</span>
+        <span><b>{readingTime} min read</b></span>
     )
 
 }

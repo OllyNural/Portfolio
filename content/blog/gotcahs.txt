@@ -12,7 +12,11 @@ Colours get duplicated when programatically creating the tag chips for searching
     {key: '5', label: 'Workplace', color: '#3D315B'},
 
 
--1) Blind Confidence 
+https://12factor.net/
+
+Add - Request a Topic button
+
+[X] Blind Confidence 
 
 0) “Done is better than perfect.” — Sheryl Sandberg
  - But what does it mean for you?

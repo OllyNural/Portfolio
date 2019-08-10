@@ -22,6 +22,7 @@ const styles = theme => ({
   },
   blogDescription: {
     marginBottom: '10px',
+    fontSize: '0.9em',
   },
   blogDate: {
     color: theme.palette.secondary.main,
