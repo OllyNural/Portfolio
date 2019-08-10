@@ -7,11 +7,11 @@ tags: ["Workplace"]
 
 ## How to ask for help
 
-Asking for help is one of the most effective ways of not only getting work done but learning at the same time. However, it can be a very difficult, and in some ways delicate thing to do. We often do it inefficient ways - sometimes giving too much or too little information for those that want to help us. 
+Asking for help is one of the most effective ways of not only getting work done but learning at the same time. However, it can be a very difficult, and in some ways, delicate thing to do. We often do it in inefficient ways - sometimes giving too much or too little information for those that want to help us. 
 
 This is a very common problem not only in the workplace but also in the Open Source community. Issues opened without a predefined template of questions often results in many comments asking for more information and more context.
 
-Here are some tips that help me when asking:
+Here are the main steps that I follow when asking for help:
 
 ### 1) Give Unbiased Context
 
@@ -34,7 +34,7 @@ Keep this part as objective as possible - a **simple, brief objective overview**
 
 ### 2) Be concise and clear
 
-It is very tempting to give a full and in-depth backstory to your issue. Go into every minute detail, hell even start monologuing about how we all got to this point in time in the universe. It happens to the best of us, it really does. 
+It is very tempting to give a full and in-depth backstory to your issue. For you to go into every minute detail, talk about every insignificant element of your work  - hell even start monologuing about your life story to date. It happens to the best of us, it really does. 
 
 People want to help you. They do. But it's hard when you can't tell what's relevant and applicable to your issue, and what's just... *fluff*.
 
@@ -42,7 +42,7 @@ When describing your problem, be incredibly clear and concise.
 
 <span class="blogpost-highlighted">Describe what the actual problem is, how you got here, what you have tried, and *maybe* what you think the issue could be with.</span>
 
-The reason why you should only maybe give your thoughts is due to a bias you may have regarding your issue - that you may then pass on to the person helping you. Of course, if there is valuable information or even an educated hunch they need to know about by all means tell them. However, if you have an uneducated hunch/guess that it could be something XYZ, then maybe hold off until they have had a decent think or look over.
+The reason why you should only maybe give your thoughts is due to a bias you may have regarding your issue - that you may then pass on to the person helping you. Of course, if there is valuable information or even an educated hunch they need to know about by all means tell them. However, if you have an uneducated hunch/guess that it could be something XYZ, then maybe hold off until they have had some time to look over and understand the problem thoroughly. 
 
 <span class="blogpost-highlighted">Note</span>: Github issues are actually a _fantastic_ example of properly designed concise issues with plenty of context for others to help with. 
 
