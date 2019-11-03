@@ -72,7 +72,7 @@ By going for breaks and rest times at the time and same interval, it means you a
 ### 1) Be ruthless with time
 It's very easy to get bogged down on a problem and to let the other person bash their head at a keyboard for hours upon end to no avail. One of the most important things about Pair Programming is that <span class="blogpost-highlighted">there are two of you involved</span>. You should always feel confident to say something like 'This doesn't seem like a good approach, maybe we should take a step back'. 
 
-Not only are you helping yourself, (as you are not providing much value in the above scenario, nor learning much), but you are also helping the other person - they might not how long something is taking, nor when you both last evaluated where you were with the current problem. 
+Not only are you helping yourself, (as you are not providing much value in the above scenario, nor learning much), but you are also helping the other person - they might not know how long something is taking, nor when you both last evaluated where you were with the current problem. 
 
 **Fixed time limits are your friend here!**
 
