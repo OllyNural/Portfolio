@@ -17,6 +17,11 @@ html {
   font-weight: 700;
 }
 
+.blogpost-highlighted-blue {
+  color: #325D79;
+  font-weight: 700;
+}
+
 blockquote {
   /* border-left: 0.4rem solid #134896; */
   font-size: 1.1em;
