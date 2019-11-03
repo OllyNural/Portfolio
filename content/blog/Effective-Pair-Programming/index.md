@@ -1,6 +1,6 @@
 ---
 title: Effective Pair Programming
-date: "2019-07-11T22:12:03.284Z"
+date: "2019-11-03T22:12:03.284Z"
 excerpt: Pairing is a common concept 
 tags: ["Pairing", "Workplace"]
 ---
