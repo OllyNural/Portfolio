@@ -1,11 +1,11 @@
 ---
 title: Effective Pair Programming
 date: "2019-11-03T22:12:03.284Z"
-excerpt: Pairing is a common concept 
+excerpt: Pair Programming is a common concept across software development, however it can be misunderstood and badly implemented. In this post I run through the basics of pairing, why it's so invaluable, and my favourite method of pairing.
 tags: ["Pairing", "Workplace"]
 ---
 
-Pair programming is a pretty common concept, especially in well-experienced teams - however, it can be daunting to new developers coming into the software scene, due to a lack of confidence coding around others, and also confusion around how it _should_ be done. 
+Pair programming is a common concept, especially in well-experienced teams - however, it can be daunting to new developers coming into the software scene, due to a lack of confidence coding around others, and also confusion around how it _should_ be done. 
 
 This article aims to explain <span class="blogpost-highlighted">how Pair Programming is intended to be done, discuss why it's so invaluable, and will talk through one of my favourite methods of pairing. </span>
 
