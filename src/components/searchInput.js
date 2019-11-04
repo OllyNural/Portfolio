@@ -1,7 +1,6 @@
 import React from "react";
 import { withStyles } from "@material-ui/styles";
 import { Grid } from "@material-ui/core";
-// import FilterList from "@material-ui/icons/FilterList"
 
 import ChipIcon from "./chipIcon.js";
 import { StaticQuery, graphql } from "gatsby";
@@ -75,23 +74,19 @@ function SearchInput(props) {
       `}
       render={(data) => {
         const posts = data.allMarkdownRemark.edges
-        console.log(posts)
 
         let filterTags = []
 
-        const doesExistInArray = (tag, array = filterTags) => {
-          return array.findIndex(el => el.tag === tag) !== -1
+        const doesExistInArray = (tag) => {
+          return filterTags.findIndex(el => el.label === tag) !== -1
         }
 
         posts.forEach(node => {
           let tags = node.node.frontmatter.tags
           tags.forEach(tag => {
-            console.log(doesExistInArray(tag))
             if (!doesExistInArray(tag)) filterTags.push({label: tag})
           });
         });
-        
-        console.log(filterTags)
 
         return (
           <Grid container item className={classes.gridIcons} xs={12}>
