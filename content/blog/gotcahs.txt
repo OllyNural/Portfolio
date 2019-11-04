@@ -17,13 +17,13 @@ https://12factor.net/
 Add - Request a Topic button
 
 [X] Blind Confidence 
+[X] How to ask for help
+[X] Effective Pair Programming
 
 0) “Done is better than perfect.” — Sheryl Sandberg
  - But what does it mean for you?
 
 1) Why you should care about the software delivery lifecycle
-
-2) How to ask for help
 
 3) Be like water, Be like glue. 
  - Being a good developer doesn't mean just coding. More importantly, not coding for a few days or even a sprint doesn't make you a bad developer.
@@ -33,8 +33,22 @@ Add - Request a Topic button
 4) DevOps doesn't mean Jack-of-all-Trades developer. Or does it?
  - When I first started getting into this DevOps thing I was complaining I was just a Jack of all trades developer
 
+5) What is: DevOps series - Overview
+
+
 Just because you _can_ do something doesn't mean you should do or have to. Don't be pigeonholed.
 
- Maintain a healthy level of ignorance and abstraction in your learning
+7) Code katas
+
+8) Programming Flow
+
+9) Test Driven Development
+
+10) Mobbing
+
+
+Burning Out
+
+Maintain a healthy level of ignorance and abstraction in your learning
 - helps you learn a lot of different things
 
