@@ -31,7 +31,7 @@ function Title(props) {
             <Grid item xs={12} className={classes.heroText} >
               {/* <span className={classes.subHeading}> A blog following the life of a junior developer.</span><br />
               <span className={classes.subHeading}>Demystifying software delivery for other junior developers. </span> */}
-              <span className={classes.subHeading}> A blog for new and inexperienced developers; written by a junior developer.</span><br />
+              <span className={classes.subHeading}> A blog for new and inexperienced developers; written by a senior developer.</span><br />
               <span className={classes.subHeading}> Demystifying software delivery for other junior developers.</span>
             </Grid>
           </React.Fragment>
