@@ -38,7 +38,7 @@
     "react-transition-group": "^4.0.1",
     "react-typography": "^0.16.19",
     "styled-components": "^4.2.1",
-    "styled-jsx": "^3.2.1",
+    "styled-jsx": "^5.1.0",
     "typeface-aleo": "0.0.69",
     "typeface-cutive": "0.0.72",
     "typography": "^0.16.19",
